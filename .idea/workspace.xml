@@ -2,407 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b4f8298-0f47-4a1f-bf6a-70b73f930f11" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/auth/auth.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/auth/auth.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/auth/auth.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/auth/auth.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/auth/auth.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/auth/lazyloader.routes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/chartjs/area-chart/area-chart.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/chartjs/area-chart/area-chart.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/chartjs/area-chart/area-chart.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/chartjs/area-chart/area-chart.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/chartjs/bar-chart/bar-chart.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/chartjs/bar-chart/bar-chart.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/chartjs/bar-chart/bar-chart.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/chartjs/bar-chart/bar-chart.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/chartjs/chartjs.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/chartjs/chartjs.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/chartjs/chartjs.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/chartjs/chartjs.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/chartjs/chartjs.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/chartjs/line-chart/line-chart.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/chartjs/line-chart/line-chart.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/chartjs/line-chart/line-chart.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/chartjs/line-chart/line-chart.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/chartjs/pie-chart/pie-chart.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/chartjs/pie-chart/pie-chart.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/chartjs/pie-chart/pie-chart.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/chartjs/pie-chart/pie-chart.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/charts.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/charts.router.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/ngx-charts/area-chart/area-chart.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/ngx-charts/area-chart/area-chart.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/ngx-charts/area-chart/area-chart.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/ngx-charts/area-chart/area-chart.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/ngx-charts/area-chart/data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/ngx-charts/doughnut-chart/data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/ngx-charts/doughnut-chart/doughnut-chart.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/ngx-charts/doughnut-chart/doughnut-chart.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/ngx-charts/doughnut-chart/doughnut-chart.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/ngx-charts/doughnut-chart/doughnut-chart.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/ngx-charts/guage-chart/data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/ngx-charts/guage-chart/guage-chart.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/ngx-charts/guage-chart/guage-chart.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/ngx-charts/guage-chart/guage-chart.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/ngx-charts/guage-chart/guage-chart.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/ngx-charts/ngx-charts.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/ngx-charts/ngx-charts.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/ngx-charts/ngx-charts.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/ngx-charts/ngx-charts.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/ngx-charts/ngx-charts.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/ngx-charts/pie-chart/data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/ngx-charts/pie-chart/pie-chart.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/ngx-charts/pie-chart/pie-chart.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/ngx-charts/pie-chart/pie-chart.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/ngx-charts/pie-chart/pie-chart.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/nvd3-charts/bar-chart/bar-chart.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/nvd3-charts/bar-chart/bar-chart.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/nvd3-charts/bar-chart/bar-chart.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/nvd3-charts/bar-chart/bar-chart.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/nvd3-charts/historical-bar-chart/historical-bar-chart.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/nvd3-charts/historical-bar-chart/historical-bar-chart.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/nvd3-charts/historical-bar-chart/historical-bar-chart.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/nvd3-charts/historical-bar-chart/historical-bar-chart.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/nvd3-charts/nvd3-charts.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/nvd3-charts/nvd3-charts.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/nvd3-charts/nvd3-charts.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/nvd3-charts/nvd3-charts.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/nvd3-charts/nvd3-charts.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/nvd3-charts/pie-chart/pie-chart.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/nvd3-charts/pie-chart/pie-chart.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/nvd3-charts/pie-chart/pie-chart.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/nvd3-charts/pie-chart/pie-chart.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/nvd3-charts/sunburst-chart/sunburst-chart.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/nvd3-charts/sunburst-chart/sunburst-chart.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/nvd3-charts/sunburst-chart/sunburst-chart.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/charts/nvd3-charts/sunburst-chart/sunburst-chart.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/chats/chat-list/chat-list.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/chats/chat-list/chat-list.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/chats/chat-list/chat-list.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/chats/chat-list/chat-list.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/chats/chat.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/chats/chat.router.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/chats/chat/chat.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/chats/chat/chat.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/chats/chat/chat.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/chats/chat/chat.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/chats/chats.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/chats/chats.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/chats/contacts/contacts.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/chats/contacts/contacts.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/chats/contacts/contacts.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/chats/contacts/contacts.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/chats/notice/notice.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/chats/notice/notice.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/chats/notice/notice.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/chats/notice/notice.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/core.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/fullscreen/fullscreen.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/fullscreen/fullscreen.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/fullscreen/fullscreen.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/fullscreen/fullscreen.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/search-bar/search-bar.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/search-bar/search-bar.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/search-bar/search-bar.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/search-bar/search-bar.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/sidebar/sidebar.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/sidebar/sidebar.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/sidebar/sidebar.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/sidebar/sidebar.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/sidemenu-item/sidemenu-item.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/sidemenu-item/sidemenu-item.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/sidemenu-item/sidemenu-item.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/sidemenu-item/sidemenu-item.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/sidemenu/menu-element.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/sidemenu/sidemenu.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/sidemenu/sidemenu.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/sidemenu/sidemenu.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/sidemenu/sidemenu.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/toolbar-notification/toolbar-notification.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/toolbar-notification/toolbar-notification.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/toolbar-notification/toolbar-notification.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/toolbar-notification/toolbar-notification.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/toolbar/toolbar.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/toolbar/toolbar.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/toolbar/toolbar.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/toolbar/toolbar.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/toolbar/toolbar.helpers.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/user-menu/user-menu.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/user-menu/user-menu.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/user-menu/user-menu.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/user-menu/user-menu.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-accounts/dashboard-accounts.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-accounts/dashboard-accounts.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-accounts/dashboard-accounts.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-accounts/dashboard-accounts.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-accounts/dashboard-accounts.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-crm/dashboard-crm.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-crm/dashboard-crm.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-crm/dashboard-crm.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-crm/dashboard-crm.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-crm/dashboard-crm.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/bar-graph/bar-graph.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/bar-graph/bar-graph.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/bar-graph/bar-graph.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/bar-graph/bar-graph.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/d3-usa/d3-usa.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/d3-usa/d3-usa.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/d3-usa/d3-usa.component.spec.ts~HEAD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/d3-usa/d3-usa.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/dashboard-widget.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/dashcard/dashcard.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/dashcard/dashcard.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/dashcard/dashcard.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/dashcard/dashcard.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/doughnut-graph/doughnut-graph.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/doughnut-graph/doughnut-graph.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/doughnut-graph/doughnut-graph.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/doughnut-graph/doughnut-graph.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/line-graph/line-graph.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/line-graph/line-graph.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/line-graph/line-graph.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/line-graph/line-graph.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/pricing-plan/pricing-plan.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/pricing-plan/pricing-plan.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/pricing-plan/pricing-plan.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/pricing-plan/pricing-plan.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/profile-card/profile-card.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/profile-card/profile-card.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/profile-card/profile-card.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/profile-card/profile-card.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/round-progressbar/round-progressbar.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/round-progressbar/round-progressbar.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/round-progressbar/round-progressbar.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/round-progressbar/round-progressbar.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/sales-list/sales-list.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/sales-list/sales-list.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/sales-list/sales-list.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/sales-list/sales-list.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/share-price/share-price.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/share-price/share-price.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/share-price/share-price.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/share-price/share-price.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/weather/weather.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/weather/weather.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/weather/weather.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/weather/weather.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/world-map/world-map.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/world-map/world-map.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/world-map/world-map.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/world-map/world-map.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/editor/editor.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/editor/editor.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/editor/editor.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/editor/editor.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/editor/editor.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/forms/forms.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/forms/forms.router.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/forms/reactive-forms/reactive-forms.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/forms/reactive-forms/reactive-forms.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/forms/reactive-forms/reactive-forms.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/forms/reactive-forms/reactive-forms.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/forms/template-driven-forms/template-driven-forms.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/forms/template-driven-forms/template-driven-forms.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/forms/template-driven-forms/template-driven-forms.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/forms/template-driven-forms/template-driven-forms.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/forms/template-driven-forms/user.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/guarded-routes/guarded-routes.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/guarded-routes/guarded-routes.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/guarded-routes/guarded-routes.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/guarded-routes/guarded-routes.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/guarded-routes/guarded-routes.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/guarded-routes/guarded-routes.router.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/guarded-routes/router-deactivate/router-deactivate.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/guarded-routes/router-deactivate/router-deactivate.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/guarded-routes/router-deactivate/router-deactivate.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/guarded-routes/router-deactivate/router-deactivate.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/guarded-routes/router/router.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/guarded-routes/router/router.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/guarded-routes/router/router.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/guarded-routes/router/router.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/guarded-routes/router/router.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/lazy-load/lazy-load.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/compose/compose.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/compose/compose.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/compose/compose.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/compose/compose.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/detail/detail.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/detail/detail.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/detail/detail.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/detail/detail.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/list/list.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/list/list.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/list/list.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/list/list.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/mail.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/mail.routing.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/mail.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/mail/mail.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/mail/mail.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/mail/mail.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/mail/mail.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/searchbar/searchbar.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/searchbar/searchbar.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/searchbar/searchbar.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/searchbar/searchbar.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/toolbar/toolbar.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/toolbar/toolbar.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/toolbar/toolbar.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/mail/toolbar/toolbar.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/maps/google-map/google-map.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/maps/google-map/google-map.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/maps/google-map/google-map.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/maps/google-map/google-map.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/maps/leaflet-map/leaflet-map.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/maps/leaflet-map/leaflet-map.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/maps/leaflet-map/leaflet-map.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/maps/leaflet-map/leaflet-map.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/maps/maps.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/maps/maps.router.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/animation.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/autocomplete/autocomplete.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/autocomplete/autocomplete.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/autocomplete/autocomplete.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/autocomplete/autocomplete.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/autocomplete/helpers.data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/buttons/buttons.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/buttons/buttons.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/buttons/buttons.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/buttons/buttons.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/buttons/helpers.data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/cards/cards.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/cards/cards.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/cards/cards.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/cards/cards.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/cards/helpers.data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/checkbox/checkbox.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/checkbox/checkbox.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/checkbox/checkbox.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/checkbox/checkbox.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/checkbox/helpers.data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/datepicker/datepicker.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/datepicker/datepicker.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/datepicker/datepicker.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/datepicker/datepicker.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/datepicker/helpers.data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/expansion-panel/expansion-panel.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/expansion-panel/expansion-panel.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/expansion-panel/expansion-panel.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/expansion-panel/expansion-panel.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/expansion-panel/helpers.data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/icons/helpers.data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/icons/icons.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/icons/icons.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/icons/icons.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/icons/icons.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/input/helpers.data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/input/input.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/input/input.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/input/input.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/input/input.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/list/helpers.data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/list/list.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/list/list.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/list/list.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/list/list.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/material-widgets.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/material-widgets.router.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/menu/helpers.data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/menu/menu.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/menu/menu.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/menu/menu.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/menu/menu.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/progressbar/helpers.data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/progressbar/progressbar.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/progressbar/progressbar.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/progressbar/progressbar.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/progressbar/progressbar.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/radio/helpers.data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/radio/radio.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/radio/radio.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/radio/radio.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/radio/radio.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/select/helpers.data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/select/select.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/select/select.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/select/select.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/select/select.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/slider/helpers.data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/slider/slider.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/slider/slider.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/slider/slider.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/slider/slider.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/slidetoggle/helpers.data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/slidetoggle/slidetoggle.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/slidetoggle/slidetoggle.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/slidetoggle/slidetoggle.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/slidetoggle/slidetoggle.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/spinner/helpers.data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/spinner/spinner.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/spinner/spinner.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/spinner/spinner.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/spinner/spinner.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/stepper/helpers.data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/stepper/stepper.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/stepper/stepper.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/stepper/stepper.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/material-widgets/stepper/stepper.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/pages/about/about.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/pages/about/about.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/pages/about/about.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/pages/about/about.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/pages/contact/contact.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/pages/contact/contact.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/pages/contact/contact.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/pages/contact/contact.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/pages/login/login.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/pages/login/login.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/pages/login/login.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/pages/login/login.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/pages/login/login.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/pages/pages.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/pages/pages.routes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/pages/services/services.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/pages/services/services.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/pages/services/services.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/pages/services/services.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/pages/services/services.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/register/register.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/register/register.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/register/register.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/register/register.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/register/register.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/scrumboard/scrumboard.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/scrumboard/scrumboard.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/scrumboard/scrumboard.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/scrumboard/scrumboard.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/scrumboard/scrumboard.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/tables/feature-table/feature-table.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/tables/feature-table/feature-table.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/tables/feature-table/feature-table.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/tables/feature-table/feature-table.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/tables/feature-table/helpers.data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/tables/filter-table/filter-table.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/tables/filter-table/filter-table.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/tables/filter-table/filter-table.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/tables/filter-table/filter-table.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/tables/filter-table/helpers.data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/tables/fixed-table/fixed-table.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/tables/fixed-table/fixed-table.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/tables/fixed-table/fixed-table.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/tables/fixed-table/fixed-table.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/tables/fixed-table/helpers.data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/tables/interfaces.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/tables/responsive-table/helpers.data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/tables/responsive-table/responsive-table.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/tables/responsive-table/responsive-table.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/tables/responsive-table/responsive-table.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/tables/responsive-table/responsive-table.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/tables/tables.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/tables/tables.router.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/guards/auth.guard.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/send-sms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../angular-src/.editorconfig" beforeDir="false" />
@@ -2620,6 +2220,8 @@
       <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../routes/users.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -2658,7 +2260,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/core/user-menu/user-menu.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
+            <state relative-caret-position="420">
               <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
             </state>
           </provider>
@@ -2667,8 +2269,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/core/user-menu/user-menu.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+            <state relative-caret-position="210">
+              <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
               <folding>
                 <element signature="e#0#83#0" expanded="true" />
               </folding>
@@ -2676,11 +2278,29 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular-src/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="531">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/pages/login/login.component.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+              <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -2688,7 +2308,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angular-src/src/app/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
+            <state relative-caret-position="150">
               <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
@@ -2754,12 +2374,11 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/angular-src/src/app/app.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/maps/leaflet-map/leaflet-map.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/auth/auth.component.html" />
         <option value="$PROJECT_DIR$/models/systemInfo.js" />
@@ -2810,6 +2429,7 @@
         <option value="$PROJECT_DIR$/angular-src/src/app/components/core/user-menu/user-menu.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/core/user-menu/user-menu.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/pages/login/login.component.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -2831,65 +2451,8 @@
         <subPane>
           <expand>
             <path>
-              <item name="wspend2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wspend2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wspend2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wspend2" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wspend2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wspend2" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wspend2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wspend2" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wspend2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wspend2" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wspend2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wspend2" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="guards" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wspend2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wspend2" type="462c0819:PsiDirectoryNode" />
-              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wspend2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wspend2" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wspend2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wspend2" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wspend2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wspend2" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="wSpend-expenses" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wSpend-expenses" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -2901,7 +2464,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../wSpend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -2951,17 +2514,18 @@
       <workItem from="1560867445250" duration="1121000" />
       <workItem from="1561035970338" duration="7470000" />
       <workItem from="1561224740540" duration="3440000" />
+      <workItem from="1561230584109" duration="169000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64545000" />
+    <option name="totallyTimeSpent" value="64714000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28228387" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2854856" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -2975,7 +2539,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.36609071" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3650108" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32937366" />
       <window_info anchor="bottom" id="Messages" order="13" />
@@ -2989,16 +2553,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/doughnut-graph/doughnut-graph.component.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/doughnut-graph/doughnut-graph.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="35" column="27" lean-forward="true" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/round-progressbar/round-progressbar.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -3292,16 +2846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/node_modules/@angular/router/src/router_module.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -3338,17 +2882,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/core/user-menu/user-menu.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
+        <state relative-caret-position="420">
           <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/core/user-menu/user-menu.component.ts">
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        <state relative-caret-position="150">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
           <folding>
-            <element signature="e#0#83#0" expanded="true" />
+            <element signature="e#0#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3356,7 +2900,31 @@
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/pages/login/login.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/core/user-menu/user-menu.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#83#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>
