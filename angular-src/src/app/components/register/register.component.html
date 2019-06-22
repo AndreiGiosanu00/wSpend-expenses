@@ -1,0 +1,71 @@
+<div fxLayout="column" fxFlexFill fxLayoutAlign="center center" style="background-image:url('../../../../assets/login11.jpg');
+height: 100%;
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover; ">
+  <div fxLayout="column" >
+
+    <div class=" mat-elevation-z4">
+      <mat-card>
+        <mat-card-title>User login
+        </mat-card-title>
+        <mat-card-content>
+          <ng-container *ngIf="activeStep == 1">
+            <form fxLayout="column" fxLayoutAlign="start stretch" [formGroup]="userForm">
+              <mat-form-field class="full-width">
+                <input type="text" id="name" class="input" placeholder="Please enter your name"
+                       formControlName="name" required matInput>
+              </mat-form-field>
+              <div *ngIf="formErrors.name" class="help is-danger">
+                {{ formErrors.name }}
+              </div>
+              <mat-form-field class="full-width">
+                <input type="text" id="username" class="input" placeholder="Please enter your username"
+                       formControlName="username" required matInput>
+              </mat-form-field>
+              <div *ngIf="formErrors.username" class="help is-danger">
+                {{ formErrors.username }}
+              </div>
+              <mat-form-field class="full-width">
+                <input type="email" id="email" class="input" placeholder="Please enter your email"
+                       formControlName="email" required matInput>
+              </mat-form-field>
+              <div *ngIf="formErrors.email" class="help is-danger">
+                {{ formErrors.email }}
+              </div>
+              <mat-form-field class="full-width">
+                <input type="password" id="password" class="input" placeholder="please  enter your password"
+                       formControlName="password" required matInput>
+              </mat-form-field>
+              <div *ngIf="formErrors.password" class="help is-danger">
+                {{ formErrors.password }}
+              </div>
+              <mat-form-field class="full-width">
+                <input type="text" id="phone" class="input" placeholder="Please enter your phone number"
+                       formControlName="phone" required matInput>
+              </mat-form-field>
+              <div *ngIf="formErrors.phone" class="help is-danger">
+                {{ formErrors.phone }}
+              </div>
+              <button mat-raised-button color="primary" type="submit" [disabled]="!userForm.valid" (click)="register()">register</button>
+            </form>
+          </ng-container>
+
+          <ng-container *ngIf="activeStep == 2">
+            <form fxLayout="column" fxLayoutAlign="start stretch" [formGroup]="codeForm">
+            <mat-form-field class="full-width">
+              <input type="text" id="code" class="input" placeholder="Please enter the code received via SMS"
+                     formControlName="code" required matInput>
+            </mat-form-field>
+            <div *ngIf="formErrors.code" class="help is-danger">
+              {{ formErrors.code }}
+            </div>
+              <button mat-raised-button color="primary" type="submit" [disabled]="!codeForm.valid" (click)="register()">register</button>
+            </form>
+          </ng-container>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
