@@ -14,6 +14,12 @@ export class ExpensesComponent implements OnInit {
   constructor(private authService: AuthService,
               private router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    // Fix the modal backdrop issue.
+    $('#deleteExpenseModal').appendTo('body');
+    $('#addExpenseModal').appendTo('body');
+    $('#editEmployeeModal').appendTo('body');
+
+  }
 
 }
