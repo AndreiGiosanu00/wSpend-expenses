@@ -7,7 +7,8 @@ const mongoose = require('mongoose');
 const config = require('./config/database');
 
 // Conectarea cu baza de date
-mongoose.connect(config.database);
+mongoose.connect(config.database, { useNewUrlParser: true });
+
 
 // Atunci cand s-a facut conectarea
 mongoose.connection.on('connected', () => {
@@ -18,6 +19,7 @@ mongoose.connection.on('connected', () => {
 mongoose.connection.on('error', (err) => {
     console.log('Database error: ' + err);
 });
+
 
 const app = express();
 

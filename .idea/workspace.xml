@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b4f8298-0f47-4a1f-bf6a-70b73f930f11" name="Default Changelist" comment="Add expenses page layout.">
-      <change afterPath="$PROJECT_DIR$/routes/expenses.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../angular-src/.editorconfig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../angular-src/.gitignore" beforeDir="false" />
@@ -2222,6 +2221,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/expense.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/expense.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/expenses.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/expenses.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -2239,8 +2239,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/expense.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="50" column="102" lean-forward="true" selection-start-line="50" selection-start-column="102" selection-end-line="50" selection-end-column="102" />
+            <state relative-caret-position="383">
+              <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -2248,7 +2248,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41">
+            <state relative-caret-position="338">
               <caret line="79" column="3" lean-forward="true" selection-start-line="79" selection-start-column="3" selection-end-line="79" selection-end-column="3" />
             </state>
           </provider>
@@ -2257,8 +2257,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/expenses.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="338">
+              <caret line="84" column="7" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -2266,8 +2266,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="48" column="27" lean-forward="true" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+            <state relative-caret-position="135">
+              <caret line="9" column="61" lean-forward="true" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/expenses/expenses.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2377,15 +2389,15 @@
         <option value="$PROJECT_DIR$/angular-src/src/app/components/core/user-menu/user-menu.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/pages/login/login.component.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/routes/users.js" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/auth/auth.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/lazy-load/lazy-load.module.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/core/sidemenu/sidemenu.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/core/sidemenu/menu-element.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/expenses/expenses.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/expenses/expenses.component.ts" />
-        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/routes/users.js" />
         <option value="$PROJECT_DIR$/models/expense.js" />
+        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/routes/expenses.js" />
       </list>
     </option>
@@ -2394,9 +2406,10 @@
     <dismissed value="$PROJECT_DIR$/angular-src/package.json" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="55" />
-    <option name="width" value="960" />
-    <option name="height" value="789" />
+    <option name="x" value="1920" />
+    <option name="y" value="-2" />
+    <option name="width" value="1920" />
+    <option name="height" value="1082" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -2404,7 +2417,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -2452,6 +2464,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2509,6 +2522,7 @@
       <workItem from="1561224740540" duration="3440000" />
       <workItem from="1561230584109" duration="2050000" />
       <workItem from="1561303351149" duration="2428000" />
+      <workItem from="1561354772833" duration="8915000" />
     </task>
     <task id="LOCAL-00001" summary="Fix style for dashboard.">
       <created>1561232825503</created>
@@ -2538,17 +2552,24 @@
       <option name="project" value="LOCAL" />
       <updated>1561304754049</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add backend API for expenses.">
+      <created>1561324787010</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1561324787010</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75270000" />
+    <option name="totallyTimeSpent" value="84590000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
+    <frame x="1920" y="-2" width="1920" height="1082" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2886873" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.291889" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -2562,7 +2583,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3650108" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.35466945" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32937366" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32937366" />
@@ -2580,16 +2601,10 @@
     <MESSAGE value="Add guard for auth component." />
     <MESSAGE value="Fix dashboard menu links." />
     <MESSAGE value="Add expenses page layout." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add expenses page layout." />
+    <MESSAGE value="Add backend API for expenses." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add backend API for expenses." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/routes/report-by-email.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/auth/auth.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -2605,9 +2620,6 @@
           <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.js">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/passport/lib/authenticator.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -2643,9 +2655,6 @@
           <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/dashboard-crm/dashboard-crm.component.html">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/models/goal.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -2825,25 +2834,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/auth/auth.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#mat-sidenav#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#mat-toolbar#0;n#mat-sidenav#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#h1#0;n#mat-toolbar#0;n#mat-sidenav#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#mat-sidenav-content#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#mat-drawer#0;n#mat-drawer-container#0;n#mat-sidenav-content#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#mat-drawer-content#0;n#mat-drawer-container#0;n#mat-sidenav-content#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#cdk-toolbar#0;n#mat-drawer-content#0;n#mat-drawer-container#0;n#mat-sidenav-content#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#perfect-scrollbar#0;n#mat-drawer-content#0;n#mat-drawer-container#0;n#mat-sidenav-content#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#mat-sidenav#1;n#mat-sidenav-container#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/node_modules/ngx-perfect-scrollbar/dist/lib/perfect-scrollbar.component.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -2908,16 +2898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/expenses/expenses.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/goals/goals.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -2947,31 +2927,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/routes/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="48" column="27" lean-forward="true" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+        <state relative-caret-position="338">
+          <caret line="79" column="3" lean-forward="true" selection-start-line="79" selection-start-column="3" selection-end-line="79" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/users.js">
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/dashboard-crm/dashboard-crm.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/auth/auth.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="79" column="3" lean-forward="true" selection-start-line="79" selection-start-column="3" selection-end-line="79" selection-end-column="3" />
+        <state relative-caret-position="225">
+          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <element signature="n#style#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#mat-sidenav#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#mat-toolbar#0;n#mat-sidenav#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h1#0;n#mat-toolbar#0;n#mat-sidenav#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#mat-sidenav-content#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#mat-drawer#0;n#mat-drawer-container#0;n#mat-sidenav-content#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#mat-drawer-content#0;n#mat-drawer-container#0;n#mat-sidenav-content#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#cdk-toolbar#0;n#mat-drawer-content#0;n#mat-drawer-container#0;n#mat-sidenav-content#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#perfect-scrollbar#0;n#mat-drawer-content#0;n#mat-drawer-container#0;n#mat-sidenav-content#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#mat-sidenav#1;n#mat-sidenav-container#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/expenses/expenses.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="1942" selection-start-line="1942" selection-end-line="1942" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/expense.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="50" column="102" lean-forward="true" selection-start-line="50" selection-start-column="102" selection-end-line="50" selection-end-column="102" />
+        <state relative-caret-position="383">
+          <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="61" lean-forward="true" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/expenses.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="338">
+          <caret line="84" column="7" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
         </state>
       </provider>
     </entry>

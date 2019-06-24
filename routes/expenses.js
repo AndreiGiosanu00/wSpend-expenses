@@ -70,5 +70,24 @@ router.get('/expenses_year', (req, res, next) => {
     });
 });
 
+router.put('/update_expense/:id', (req, res, next) => {
+    Expense.findOneAndUpdate(req.params.id, {name: req.body.name, price: req.body.price, category: req.body.category}).then((result) => {
+        if (result) {
+            res.json({success: true, msg: 'Entry with id: ' + result._id + ' has been updated.'});
+        } else {
+            res.json({success: false, msg: 'Error when trying to update entry!'})
+        }
+    });
+});
+
+router.delete('/delete_expense/:id', (req, res, next) => {
+   Expense.findOneAndDelete(req.params.id).then((err, result) => {
+       if (result) {
+           res.json({success: true, msg: 'Entry with id: ' + result._id + ' has been deleted.'});
+       } else {
+           res.json({success: false, msg: 'Error when trying to delete entry!'})
+       }
+   });
+});
 
 module.exports = router;

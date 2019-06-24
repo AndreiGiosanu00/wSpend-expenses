@@ -21,7 +21,6 @@ const ExpenseSchema = mongoose.Schema({
     },
     userId: {
         type: String,
-        required: true
     }
 });
 
@@ -31,8 +30,8 @@ module.exports.getExpenses = function({}, callback) {
     Expense.find({}, callback);
 };
 
-module.exports.getExpenseByName = function(name, callback) {
-    Expense.findOne({'name': name}, callback);
+module.exports.getExpenseById = function(id, callback) {
+    Expense.findOne({'_id': id}, callback);
 };
 
 module.exports.addExpense = function (newExpense, callback) {
