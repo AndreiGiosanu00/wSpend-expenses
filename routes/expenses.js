@@ -8,7 +8,7 @@ const Expense = require('../models/expense');
 const User = require('../models/user');
 
 // Add an expense
-router.post('/add_expense', passport.authenticate('jwt', {session: false}), (req, res, next) => {
+router.post('/add_expense', (req, res, next) => {
 
     User.getUserByUsername(req.body.username, (err, user) => {
         if (err) throw err;
@@ -27,7 +27,7 @@ router.post('/add_expense', passport.authenticate('jwt', {session: false}), (req
 
         Expense.addExpense(newExpense, (err, expense) => {
             if (err) {
-                res.json({success: false, msg: 'Failed to add expense!'});
+                res.json({success: false, msg: 'Failed to add expense!' + err});
             } else {
                 res.json({success: true, msg: 'Expense successfully added!'});
             }
@@ -36,13 +36,25 @@ router.post('/add_expense', passport.authenticate('jwt', {session: false}), (req
 });
 
 // Get all expenses
-router.get('/', passport.authenticate('jwt', {session: false}),(req, res, next) => {
-    Expense.getExpenses({}, (err, result) => {
-        if (err) {
-            res.json({success: false, msg: 'Failed to get data!'});
-        } else {
-            res.json({success: true, expenses: result});
+router.get('/:username', (req, res, next) => {
+    User.getUserByUsername(req.params.username, (err, user) => {
+        if (err) throw err;
+        if (!user) {
+            return res.json({success: false, msg: 'User not found!'});
         }
+        Expense.getExpenses({}, (err, result) => {
+            if (err) {
+                res.json({success: false, msg: 'Failed to get data!'});
+            } else {
+                let resultReturned = [];
+                result.forEach((expense) => {
+                    if (expense.userId == user._id) {
+                        resultReturned.push(expense);
+                    }
+                });
+                res.json({success: false, expenses: resultReturned});
+            }
+        });
     });
 });
 
@@ -71,8 +83,8 @@ router.get('/expenses_year',passport.authenticate('jwt', {session: false}), (req
 });
 
 // Update an expense
-router.put('/update_expense/:id', passport.authenticate('jwt', {session: false}), (req, res, next) => {
-    Expense.findOneAndUpdate(req.params.id, {name: req.body.name, price: req.body.price, category: req.body.category}).then((result) => {
+router.put('/update_expense/:id', (req, res, next) => {
+    Expense.findOneAndUpdate(req.params.id, {name: req.body.name, price: req.body.price, category: req.body.category, date: req.body.date}).then((result) => {
         if (result) {
             res.json({success: true, msg: 'Entry with id: ' + result._id + ' has been updated.'});
         } else {
@@ -82,7 +94,7 @@ router.put('/update_expense/:id', passport.authenticate('jwt', {session: false})
 });
 
 // Delete an expense
-router.delete('/delete_expense/:id', passport.authenticate('jwt', {session: false}), (req, res, next) => {
+router.delete('/delete_expense/:id', (req, res, next) => {
    Expense.findByIdAndDelete(req.params.id).then((result) => {
        if (result) {
            res.json({success: true, msg: 'Entry with id: ' + result._id + ' has been deleted.'});

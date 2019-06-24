@@ -53,6 +53,8 @@ export class AuthService {
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
 
+    console.log(expenseWithUsername);
+
     return this.http.post('http://localhost:3000/expenses/add_expense', expenseWithUsername, {headers: headers});
   }
 
@@ -62,7 +64,9 @@ export class AuthService {
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
 
-    return this.http.get('http://localhost:3000/expenses/', {headers: headers});
+    this.user = JSON.parse(localStorage.getItem('user'));
+
+    return this.http.get('http://localhost:3000/expenses/' + this.user['username'], {headers: headers});
   }
 
   updateExpense(expenseUpdated) {
