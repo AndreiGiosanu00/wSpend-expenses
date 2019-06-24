@@ -13,14 +13,32 @@ const GoalSchema = mongoose.Schema({
     price: {
         type: Number,
         required: true
+    },
+    status: {
+        type: String,
+        default: 'Inactive'
+    },
+    createdOn: {
+        type: Date,
+        default: Date.now()
+    },
+    expiresAt: {
+        type: Date,
+    },
+    userId : {
+        type: String,
     }
 });
 const Goal = module.exports = mongoose.model('Goal', GoalSchema);
 
-/*module.exports.getExpeneseByName = function(expense, callback) {
-    Expense.find({'name': expense.name, 'category': expense.category}, callback);
+module.exports.getGoals = function({}, callback) {
+    Goal.find({}, callback);
 };
 
-module.exports.addExpense = function (newExpense, callback) {
-    newExpense.save(callback);
-};*/
+module.exports.getGoadById = function(id, callback) {
+    Goal.findOne({'_id': id}, callback);
+};
+
+module.exports.addGoal = function (newGoal, callback) {
+    newGoal.save(callback);
+};

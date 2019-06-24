@@ -70,6 +70,7 @@ router.get('/expenses_year',passport.authenticate('jwt', {session: false}), (req
     });
 });
 
+// Update an expense
 router.put('/update_expense/:id', passport.authenticate('jwt', {session: false}), (req, res, next) => {
     Expense.findOneAndUpdate(req.params.id, {name: req.body.name, price: req.body.price, category: req.body.category}).then((result) => {
         if (result) {
@@ -80,6 +81,7 @@ router.put('/update_expense/:id', passport.authenticate('jwt', {session: false})
     });
 });
 
+// Delete an expense
 router.delete('/delete_expense/:id', passport.authenticate('jwt', {session: false}), (req, res, next) => {
    Expense.findByIdAndDelete(req.params.id).then((result) => {
        if (result) {
