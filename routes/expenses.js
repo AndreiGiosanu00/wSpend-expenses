@@ -8,7 +8,7 @@ const Expense = require('../models/expense');
 const User = require('../models/user');
 
 // Add an expense
-router.post('/add_expense', (req, res, next) => {
+router.post('/add_expense', passport.authenticate('jwt', {session: false}), (req, res, next) => {
 
     User.getUserByUsername(req.body.username, (err, user) => {
         if (err) throw err;
@@ -36,7 +36,7 @@ router.post('/add_expense', (req, res, next) => {
 });
 
 // Get all expenses
-router.get('/', (req, res, next) => {
+router.get('/', passport.authenticate('jwt', {session: false}),(req, res, next) => {
     Expense.getExpenses({}, (err, result) => {
         if (err) {
             res.json({success: false, msg: 'Failed to get data!'});
@@ -47,7 +47,7 @@ router.get('/', (req, res, next) => {
 });
 
 // Get expenses by month
-router.get('/expenses_month', (req, res, next) => {
+router.get('/expenses_month', passport.authenticate('jwt', {session: false}), (req, res, next) => {
     let date = new Date();
     Expense.getExpensesByMonth(date.getMonth() + 1, (err, result) => {
         if (err) {
@@ -59,7 +59,7 @@ router.get('/expenses_month', (req, res, next) => {
 });
 
 // Get expenses by year
-router.get('/expenses_year', (req, res, next) => {
+router.get('/expenses_year',passport.authenticate('jwt', {session: false}), (req, res, next) => {
     let date = new Date();
     Expense.getExpensesByYear(date.getFullYear(), (err, result) => {
         if (err) {
@@ -70,7 +70,7 @@ router.get('/expenses_year', (req, res, next) => {
     });
 });
 
-router.put('/update_expense/:id', (req, res, next) => {
+router.put('/update_expense/:id', passport.authenticate('jwt', {session: false}), (req, res, next) => {
     Expense.findOneAndUpdate(req.params.id, {name: req.body.name, price: req.body.price, category: req.body.category}).then((result) => {
         if (result) {
             res.json({success: true, msg: 'Entry with id: ' + result._id + ' has been updated.'});
@@ -80,8 +80,8 @@ router.put('/update_expense/:id', (req, res, next) => {
     });
 });
 
-router.delete('/delete_expense/:id', (req, res, next) => {
-   Expense.findOneAndDelete(req.params.id).then((err, result) => {
+router.delete('/delete_expense/:id', passport.authenticate('jwt', {session: false}), (req, res, next) => {
+   Expense.findByIdAndDelete(req.params.id).then((result) => {
        if (result) {
            res.json({success: true, msg: 'Entry with id: ' + result._id + ' has been deleted.'});
        } else {
