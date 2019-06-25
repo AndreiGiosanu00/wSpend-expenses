@@ -47,6 +47,34 @@ export class ValidateService {
   }
 
   validateGoal(goal: any) {
+    let alerts = {name: '', category: '', price: '', expiresAt: ''};
+
+    if (!goal.name) {
+      alerts.name = 'Invalid name';
+    }
+
+    if (!goal.price) {
+      alerts.price = 'Invalid price';
+    }
+
+    if (!goal.category) {
+      alerts.category = 'Please select a category';
+    }
+
+    if (goal.expiresAt === 'Invalid Date') {
+      alerts.expiresAt = 'Please select a date or leave it empty for unlimited goal';
+    }
+
+    return alerts;
+  }
+
+  validateMoney(money: any) {
+
+    if (isNaN(Number(money))) {
+      return 'Invalid number';
+    }
+
+    return '';
 
   }
 

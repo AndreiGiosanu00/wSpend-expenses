@@ -62,6 +62,7 @@
           <div class="form-group">
             <label>Name</label>
             <input id="addName" type="text" class="form-control" placeholder="Enter the name" required>
+            <p *ngIf="validators.name" class="text-danger">{{validators.name}}</p>
           </div>
           <div class="form-group">
             <label>Category</label>
@@ -71,19 +72,22 @@
               <option>Shopping</option>
               <option>Entertainment</option>
             </select>
+            <p *ngIf="validators.category" class="text-danger">{{validators.category}}</p>
           </div>
           <div class="form-group">
             <label>Price</label>
             <input id="addPrice" type="text" class="form-control" placeholder="Enter the price" required>
+            <p *ngIf="validators.price" class="text-danger">{{validators.price}}</p>
           </div>
           <div class="form-group">
             <label>Expires At</label>
             <input id="addExpiresAt" type="date" class="form-control" required>
+            <p *ngIf="validators.expiresAt" class="text-danger">{{validators.expiresAt}}</p>
           </div>
         </div>
         <div class="modal-footer">
           <button class="btn btn-default" data-dismiss="modal">Cancel</button>
-          <button class="btn btn-success" data-dismiss="modal" (click)="addGoal()">Add</button>
+          <button class="btn btn-success" (click)="addGoal()">Add</button>
         </div>
       </form>
     </div>
@@ -94,7 +98,7 @@
 <div id="manageModal" class="modal fade">
   <div class="modal-dialog">
     <div class="modal-content">
-      <form>
+      <form onsubmit="return false;" >
         <div class="modal-header">
           <h4 class="modal-title">{{'Manage ' + localGoal.name}}</h4>
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -105,8 +109,9 @@
           <div class="form-group">
             <label>Investment</label>
             <input id="manageInvest" type="text" class="form-control" placeholder="Enter the investment" required [disabled]="localGoal.status === 'Expired'">
+            <p *ngIf="moneyValidator" class="text-danger">{{moneyValidator}}</p>
           </div>
-          <button class="btn btn-info" style="width: 400px; margin-left: 30px;" (click)="invest()" data-dismiss="modal" [disabled]="localGoal.status === 'Expired'">Invest</button>
+          <button class="btn btn-info" style="width: 400px; margin-left: 30px;" (click)="invest()" [disabled]="localGoal.status === 'Expired'">Invest</button>
         </div>
         <div class="modal-footer">
           <button class="btn btn-default" data-dismiss="modal" style="margin-right: 185px;">Cancel</button>
@@ -131,6 +136,7 @@
           <div class="form-group">
             <label>Name</label>
             <input id="editName" type="text" class="form-control" placeholder="Enter the name" required>
+            <p *ngIf="validators.name" class="text-danger">{{validators.name}}</p>
           </div>
           <div class="form-group">
             <label>Category</label>
@@ -140,19 +146,22 @@
               <option>Shopping</option>
               <option>Entertainment</option>
             </select>
+            <p *ngIf="validators.category" class="text-danger">{{validators.category}}</p>
           </div>
           <div class="form-group">
             <label>Price</label>
             <input id="editPrice" type="text" class="form-control" placeholder="Enter the price" required>
+            <p *ngIf="validators.price" class="text-danger">{{validators.price}}</p>
           </div>
           <div class="form-group">
             <label>Expires At</label>
             <input id="editExpiresAt" type="date" class="form-control" required>
+            <p *ngIf="validators.expiresAt" class="text-danger">{{validators.expiresAt}}</p>
           </div>
         </div>
         <div class="modal-footer">
           <button href="#manageModal" class="btn btn-default" data-dismiss="modal" data-toggle="modal">Cancel</button>
-          <button class="btn btn-success" data-dismiss="modal" (click)="editGoal()">Edit</button>
+          <button class="btn btn-success" (click)="editGoal()">Edit</button>
         </div>
       </form>
     </div>

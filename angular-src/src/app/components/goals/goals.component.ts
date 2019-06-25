@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {AuthService} from "../../services/auth.service";
 import {ValidateService} from "../../services/validate.service";
 import {DatePipe} from "@angular/common";
-import {NgxSpinnerService} from "ngx-spinner";
 import {LoadingService} from "../../services/loading.service";
 
 declare let $: any;
@@ -15,8 +14,13 @@ declare let $: any;
 export class GoalsComponent implements OnInit {
 
   private validators = {
-
+    name: '',
+    category: '',
+    price: '',
+    expiresAt: '',
   };
+
+  private moneyValidator = '';
 
   private goals = [];
   private localGoal = {
@@ -99,6 +103,7 @@ export class GoalsComponent implements OnInit {
   setupModal(goal?: any) {
     if (goal) {
       this.localGoal = goal;
+      console.log(this.localGoal.moneyInvested);
       $('#manageInvest').val('');
       $('#editName').val(this.localGoal.name);
       $('#editCategory').val(this.localGoal.category);
@@ -120,12 +125,18 @@ export class GoalsComponent implements OnInit {
     this.localGoal.expiresAt = date.toString();
     this.localGoal.username = JSON.parse(localStorage.getItem('user')).username;
 
-    this.authService.addGoal(this.localGoal).subscribe((result) => {
-      // add alerts
-      this.authService.getAllGoals().subscribe((result: any) => {
-        this.goals = result.goals;
+    this.validators = this.validateService.validateGoal(this.localGoal);
+
+    if (!this.validators.name && !this.validators.category && !this.validators.price && !this.validators.expiresAt) {
+      this.authService.addGoal(this.localGoal).subscribe((result) => {
+        // add alerts
+        this.authService.getAllGoals().subscribe((result: any) => {
+          this.goals = result.goals;
+        });
       });
-    });
+      $('#addGoalModal').modal('hide');
+    }
+
   }
 
   deleteGoal() {
@@ -147,28 +158,38 @@ export class GoalsComponent implements OnInit {
     }
     this.localGoal.username = JSON.parse(localStorage.getItem('user')).username;
 
-    this.authService.updateGoal(this.localGoal).subscribe((result) => {
-      // add alerts
-      this.authService.getAllGoals().subscribe((result: any) => {
-        this.goals = result.goals;
-        this.goals.forEach((goal) => {
-          this.verifyStatus(goal);
+    this.validators = this.validateService.validateGoal(this.localGoal);
+
+    if (!this.validators.name && !this.validators.category && !this.validators.price && !this.validators.expiresAt) {
+      this.authService.updateGoal(this.localGoal).subscribe((result) => {
+        // add alerts
+        this.authService.getAllGoals().subscribe((result: any) => {
+          this.goals = result.goals;
+          this.goals.forEach((goal) => {
+            this.verifyStatus(goal);
+          });
         });
       });
-    });
+      $('#editGoalModal').modal('hide');
+    }
   }
 
   invest() {
-    this.localGoal.moneyInvested += (+$('#manageInvest').val());
-    let date = new Date();
-    this.localGoal.lastInvestedDate = date.toString();
-    this.localGoal.status = 'Active';
-    this.authService.updateGoal(this.localGoal).subscribe((result) => {
-      // add alerts
-      this.authService.getAllGoals().subscribe((result: any) => {
-        this.goals = result.goals;
+    this.moneyValidator = this.validateService.validateMoney($('#manageInvest').val());
+
+    if (this.moneyValidator === '') {
+      this.localGoal.moneyInvested += (+$('#manageInvest').val());
+      let date = new Date();
+      this.localGoal.lastInvestedDate = date.toString();
+      this.localGoal.status = 'Active';
+      this.authService.updateGoal(this.localGoal).subscribe((result) => {
+        // add alerts
+        this.authService.getAllGoals().subscribe((result: any) => {
+          this.goals = result.goals;
+        });
       });
-    });
+      $('#manageModal').modal('hide');
+    }
   }
 
   treatAsUTC(date): any {
