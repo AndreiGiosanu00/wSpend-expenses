@@ -203,4 +203,13 @@ export class AuthService {
     return this.http.delete('http://localhost:3000/users/delete_user/' + userId,{headers: headers});
   }
 
+  reportByMail(body) {
+    let headers =  new HttpHeaders();
+    this.loadToken();
+    headers.append('Authorization', this.authToken);
+    headers.append('Content-Type', 'application/json');
+
+    return this.http.post('http://localhost:3000/report/problem', body, {headers: headers});
+  }
+
 }

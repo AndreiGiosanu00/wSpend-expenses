@@ -1,6 +1,9 @@
 import { Component, OnInit, Input, HostListener, ElementRef } from '@angular/core';
 import {AuthService} from "../../../services/auth.service";
 import {Router} from "@angular/router";
+import {LoadingService} from "../../../services/loading.service";
+
+declare let $: any;
 
 @Component({
   selector: 'cdk-user-menu',
@@ -30,10 +33,13 @@ export class UserMenuComponent implements OnInit {
     
   	constructor(private elementRef: ElementRef,
 				private authService: AuthService,
-				private router: Router) { }
+				private router: Router,
+				private loadingService: LoadingService) { }
 
 
-  	ngOnInit() {}
+  	ngOnInit() {
+		$('#reportModal').appendTo('body');
+	}
 
   	logOut() {
   		this.authService.logout();
@@ -42,6 +48,19 @@ export class UserMenuComponent implements OnInit {
 
 	goToProfile() {
   		this.router.navigateByUrl('/auth/profile');
+	}
+
+	sendReport() {
+  		let content = $('#report').val();
+		this.loadingService.show();
+		this.authService.reportByMail({content: content}).subscribe((result) => {
+			console.log(result);
+			this.loadingService.hide();
+		});
+	}
+
+	clearModal() {
+		$('#report').val('');
 	}
 
 }

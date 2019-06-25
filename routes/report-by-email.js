@@ -17,10 +17,11 @@ const mailOptions = {
     from: 'support@wspend.com',
     to: 'admin@wspend.com',
     subject: 'Nodemailer test',
-    text: 'Hello World!!'
+    text: 'Something went wrong'
 };
 
-router.get('/problem', (req, res, next) => {
+router.post('/problem', (req, res, next) => {
+    mailOptions.text = req.body.content;
     transporter.sendMail(mailOptions, function(error, info){
         if (error) {
             res.json({success: false, msg: error});
