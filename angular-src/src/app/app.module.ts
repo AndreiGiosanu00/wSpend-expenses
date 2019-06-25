@@ -7,6 +7,7 @@ import { CoreModule } from './components/core/core.module';
 import {AuthService} from "./services/auth.service";
 import {ValidateService} from "./services/validate.service";
 import {AuthGuard} from "./guards/auth.guard";
+import {RecommendationService} from "./services/recommendation.service";
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import {AuthGuard} from "./guards/auth.guard";
   providers: [
       AuthService,
       ValidateService,
+      RecommendationService,
       AuthGuard
   ],
   bootstrap: [AppComponent]

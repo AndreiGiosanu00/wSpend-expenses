@@ -3,6 +3,7 @@ import {AuthService} from "../../services/auth.service";
 import {Router} from "@angular/router";
 import {DatePipe} from "@angular/common";
 import {ValidateService} from "../../services/validate.service";
+import {RecommendationService} from "../../services/recommendation.service";
 
 declare let $: any;
 
@@ -13,7 +14,9 @@ declare let $: any;
 })
 export class ExpensesComponent implements OnInit {
 
-  private expenses: any[];
+  private expenses: any[] = [];
+  private currentPage = 1;
+  private pages = 0;
   private localExpense = {name: '', price: '', _id: '', category: '', date: '', username: ''};
   private selectedExpenses: any[] = [];
   private validators = {
@@ -22,11 +25,19 @@ export class ExpensesComponent implements OnInit {
     price: '',
     date: ''
   };
+  private itemsPerPage = 0;
+
+  private expenseTrigger = 0;
+  private unUsefulExpense = {
+    active: false,
+    text: ''
+  };
 
   constructor(private authService: AuthService,
               private router: Router,
               private datePipe: DatePipe,
-              private validateService: ValidateService) {}
+              private validateService: ValidateService,
+              private recommendationService: RecommendationService) {}
 
   ngOnInit() {
     // Fix the modal backdrop issue.
@@ -37,7 +48,33 @@ export class ExpensesComponent implements OnInit {
 
     this.authService.getAllExpenses().subscribe((result: any) => {
       this.expenses = result.expenses;
+
+      if (this.expenses.length <= 5) {
+        this.pages = 1;
+        this.itemsPerPage = this.expenses.length;
+      } else {
+        this.pages = (this.expenses.length / 5) + 1;
+        this.itemsPerPage = 5;
+      }
+
     });
+
+  }
+
+  nextPage() {
+    if (this.currentPage + 1 <= this.pages) {
+      this.currentPage ++;
+
+      this.itemsPerPage = (this.expenses.length - 5 * (this.currentPage -1)) > 5 ? 5: (this.expenses.length - 5 * (this.currentPage -1));
+    }
+  }
+
+  previousPage() {
+    if (this.currentPage - 1 >= 0) {
+      this.currentPage --;
+
+      this.itemsPerPage = 5;
+    }
   }
 
   setLocalExpense(expense?: any) {
@@ -56,6 +93,8 @@ export class ExpensesComponent implements OnInit {
   }
 
   addExpense() {
+    this.expenseTrigger ++;
+
     this.localExpense.name = $('#addName').val();
     this.localExpense.category = $('#addCategory').val();
     this.localExpense.price = $('#addPrice').val();
@@ -66,14 +105,27 @@ export class ExpensesComponent implements OnInit {
     this.validators = this.validateService.validateExpense(this.localExpense);
 
     if (!this.validators.name && !this.validators.category && !this.validators.price && !this.validators.date) {
-      this.authService.addExpense(this.localExpense).subscribe((result) => {
-        // add alerts
-        this.authService.getAllExpenses().subscribe((result: any) => {
-          this.expenses = result.expenses;
-        });
-      });
 
-      $('#addExpenseModal').modal('hide');
+      if (!this.recommendationService.isExpenseUseful(this.localExpense, this.expenses)) {
+        this.unUsefulExpense = {
+          active: true,
+          text: 'You spend too much money in ' + this.localExpense.category + ' category.<br>Are you sure that you want to spend more?'
+        }
+      } else {
+        this.expenseTrigger = 2;
+      }
+
+      if (this.expenseTrigger === 2) {
+        this.authService.addExpense(this.localExpense).subscribe((result) => {
+          // add alerts
+          this.authService.getAllExpenses().subscribe((result: any) => {
+            this.expenses = result.expenses;
+          });
+        });
+
+        $('#addExpenseModal').modal('hide');
+        this.expenseTrigger = 0;
+      }
     }
   }
 
@@ -86,6 +138,7 @@ export class ExpensesComponent implements OnInit {
           this.expenses = result.expenses;
         });
       });
+      this.currentPage = 1;
     });
   }
 
@@ -95,6 +148,7 @@ export class ExpensesComponent implements OnInit {
       this.authService.getAllExpenses().subscribe((result: any) => {
         this.expenses = result.expenses;
       });
+      this.currentPage = 1;
     });
   }
 

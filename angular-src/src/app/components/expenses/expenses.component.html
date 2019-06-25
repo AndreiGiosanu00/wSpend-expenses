@@ -33,7 +33,7 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let expense of expenses">
+      <tr *ngFor="let expense of expenses; let i = index" [hidden]="!(i < (5 * currentPage) && i >= (5 * (currentPage - 1)))">
         <td>
 							<span class="custom-checkbox">
 								<input type="checkbox" id="{{'selectOne' + expense._id}}" name="options[]" value="1" (change)="selectOne(expense)">
@@ -59,15 +59,11 @@
     </table>
 
     <div class="clearfix">
-      <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+      <div class="hint-text">Showing <b>{{itemsPerPage}}</b> out of <b>{{expenses.length}}</b> entries</div>
       <ul class="pagination">
-        <li class="page-item disabled"><a href="#">Previous</a></li>
-        <li class="page-item"><a href="#" class="page-link">1</a></li>
-        <li class="page-item"><a href="#" class="page-link">2</a></li>
-        <li class="page-item active"><a href="#" class="page-link">3</a></li>
-        <li class="page-item"><a href="#" class="page-link">4</a></li>
-        <li class="page-item"><a href="#" class="page-link">5</a></li>
-        <li class="page-item"><a href="#" class="page-link">Next</a></li>
+        <li><button class="btn btn-dark page-item" [disabled]="currentPage - 1 < 1" (click)="previousPage()">Previous</button></li>
+        <li style="margin-left: 10px; margin-right: 10px;"><button class="btn btn-dark page-item" disabled>{{currentPage}}</button></li>
+        <li><button class="btn btn-dark page-item" [disabled]="currentPage + 1 > pages" (click)="nextPage()">Next</button></li>
       </ul>
     </div>
   </div>
@@ -83,6 +79,7 @@
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         </div>
         <div class="modal-body">
+          <div *ngIf="unUsefulExpense.active" class="alert alert-danger" style="width: 115%; text-align: center; right: 25px;" [innerHTML]="unUsefulExpense.text"></div>
           <div class="form-group">
             <label>Name</label>
             <input id="addName" type="text" class="form-control" placeholder="Enter the name" required>
@@ -94,7 +91,7 @@
               <option>Food</option>
               <option>Utilities</option>
               <option>Shopping</option>
-              <option>Entertaiment</option>
+              <option>Entertainment</option>
             </select>
             <p *ngIf="validators.category" class="text-danger">{{validators.category}}</p>
           </div>
@@ -139,7 +136,7 @@
               <option [selected]="localExpense.category == 'Food'">Food</option>
               <option [selected]="localExpense.category == 'Utilities'">Utilities</option>
               <option [selected]="localExpense.category == 'Shopping'">Shopping</option>
-              <option [selected]="localExpense.category == 'Entertaiment'">Entertaiment</option>
+              <option [selected]="localExpense.category == 'Entertainment'">Entertainment</option>
             </select>
             <p *ngIf="validators.category" class="text-danger">{{validators.category}}</p>
           </div>
