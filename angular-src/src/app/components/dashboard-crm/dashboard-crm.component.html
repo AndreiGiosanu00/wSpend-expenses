@@ -4,21 +4,26 @@
     </div>
 </div>
 <div fxLayout="row" fxLayout="row wrap">
-    <!--<cdk-bar-graph fxFlex="37.5" fxFlex.lt-sm="100" fxFlex.sm="50"></cdk-bar-graph> -->
-    <cdk-doughnut-graph fxFlex="37.5" fxFlex.lt-sm="100" fxFlex.sm="50"></cdk-doughnut-graph>
+    <cdk-doughnut-graph fxFlex="37.5" fxFlex.lt-sm="100" fxFlex.sm="50" style="margin-left: 500px;"></cdk-doughnut-graph>
 </div>
 
-<div fxLayout="row" fxLayout="row wrap">
+<div *ngIf="firstFourActiveGoals.length == 4" fxLayout="row" fxLayout="row wrap">
     <div fxFlex.lt-sm="100" fxFlex.sm="50" fxFlex.md="25">
-        <cdk-round-progressbar [title]="'NEW CAR'" [current]="'25'" [max]="'100'" [background]="'#FFF968'" [color]="'#B1A7FF'" [boxcolor]="'#7986CB'"></cdk-round-progressbar>
+        <cdk-round-progressbar [title]="firstFourActiveGoals[0].name" [current]="firstFourActiveGoals[0].moneyInvested" [max]="firstFourActiveGoals[0].price" [background]="'#FFF968'" [color]="'#B1A7FF'" [boxcolor]="'#7986CB'"></cdk-round-progressbar>
     </div>
     <div fxFlex.lt-sm="100" fxFlex.sm="50" fxFlex.md="25">
-        <cdk-round-progressbar [title]="'NEW PHONE'" [current]="'33'" [max]="'100'" [background]="'#FFE268'" [color]="'#A7C1FF'" [boxcolor]="'#42A5F5'"></cdk-round-progressbar>
+        <cdk-round-progressbar [title]="firstFourActiveGoals[1].name" [current]="firstFourActiveGoals[1].moneyInvested" [max]="firstFourActiveGoals[1].price" [background]="'#FFE268'" [color]="'#A7C1FF'" [boxcolor]="'#42A5F5'"></cdk-round-progressbar>
     </div>
     <div fxFlex.lt-sm="100" fxFlex.sm="50" fxFlex.md="25">
-        <cdk-round-progressbar [title]="'SUMMER TRIP'" [current]="'78'" [max]="'100'" [background]="'#FFC368'" [color]="'#A7F0FF'" [boxcolor]="'#26A69A'"></cdk-round-progressbar>
+        <cdk-round-progressbar [title]="firstFourActiveGoals[2].name" [current]="firstFourActiveGoals[2].moneyInvested" [max]="firstFourActiveGoals[2].price" [background]="'#FFC368'" [color]="'#A7F0FF'" [boxcolor]="'#26A69A'"></cdk-round-progressbar>
     </div>
     <div fxFlex.lt-sm="100" fxFlex.sm="50" fxFlex.md="25">
-        <cdk-round-progressbar [title]="'SAVE MONEY'" [current]="'15'" [max]="'100'" [background]="'#FFCF68'" [color]="'#A7DEFF'" [boxcolor]="'#26C6DA'"></cdk-round-progressbar>
+        <cdk-round-progressbar [title]="firstFourActiveGoals[3].name" [current]="firstFourActiveGoals[3].moneyInvested" [max]="firstFourActiveGoals[3].price" [background]="'#FFCF68'" [color]="'#A7DEFF'" [boxcolor]="'#26C6DA'"></cdk-round-progressbar>
+    </div>
+</div>
+<div *ngIf="firstFourActiveGoals.length < 4" class="alert alert-warning" style="text-align: center;">You don't have four goals to display the full interface. To add them go to wishlist page and click "Add a new goal".</div>
+<div *ngIf="firstFourActiveGoals.length >= 1 && firstFourActiveGoals.length <= 3" fxLayout="row" fxLayout="row wrap" style="width: 500px; margin-left: 600px;">
+    <div fxFlex.lt-sm="100" fxFlex.sm="50" fxFlex.md="25">
+        <cdk-round-progressbar [title]="firstFourActiveGoals[0].name" [current]="firstFourActiveGoals[0].moneyInvested" [max]="firstFourActiveGoals[0].price" [background]="'#FFF968'" [color]="'#B1A7FF'" [boxcolor]="'#7986CB'"></cdk-round-progressbar>
     </div>
 </div>

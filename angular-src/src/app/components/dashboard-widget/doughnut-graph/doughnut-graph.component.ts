@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
+import {AuthService} from "../../../services/auth.service";
+import {LoadingService} from "../../../services/loading.service";
 
 @Component({
   selector: 'cdk-doughnut-graph',
@@ -8,11 +10,40 @@ import { Chart } from 'chart.js';
 })
 export class DoughnutGraphComponent implements OnInit {
 
-  constructor() { }
+    private data = {
+        food: 0,
+        utilities: 0,
+        entertainment: 0,
+        shopping: 0
+    };
+
+  constructor(private authService: AuthService,
+              private loadingService: LoadingService) { }
 
   ngOnInit() {
       setTimeout(() => {
-          this.createDoughnutGraph();
+          this.authService.getAllExpenses().subscribe((result: any) => {
+              let expenses = result.expenses;
+              let currentDate = new Date();
+              expenses.forEach((expense) => {
+                  let expenseDate = new Date(expense.date);
+                  if (currentDate.getMonth() == expenseDate.getMonth()) {
+                      if (expense.category == 'Food') {
+                          this.data.food += (+expense.price);
+                      }
+                      if (expense.category == 'Utilities') {
+                          this.data.utilities += (+expense.price);
+                      }
+                      if (expense.category == 'Shopping') {
+                          this.data.shopping += (+expense.price);
+                      }
+                      if (expense.category == 'Entertainment') {
+                          this.data.entertainment += (+expense.price);
+                      }
+                  }
+              });
+              this.createDoughnutGraph();
+          });
       },500)
 
   }
@@ -40,10 +71,10 @@ export class DoughnutGraphComponent implements OnInit {
             labels: ['Food ', 'Entertainment ', 'Shopping ', 'Utilities '],
             datasets: [ {
                 data: [
-                    523,
-                    280,
-                    480,
-                    1460,
+                    this.data.food,
+                    this.data.entertainment,
+                    this.data.shopping,
+                    this.data.utilities,
                 ],
                 backgroundColor: [
                     '#F8796E',

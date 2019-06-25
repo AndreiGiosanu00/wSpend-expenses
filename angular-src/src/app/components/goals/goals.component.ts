@@ -128,6 +128,7 @@ export class GoalsComponent implements OnInit {
     this.validators = this.validateService.validateGoal(this.localGoal);
 
     if (!this.validators.name && !this.validators.category && !this.validators.price) {
+      console.log('da');
       this.loadingService.show();
       this.authService.addGoal(this.localGoal).subscribe((result) => {
         // add alerts
