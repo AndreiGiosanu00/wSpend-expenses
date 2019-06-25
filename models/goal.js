@@ -23,10 +23,14 @@ const GoalSchema = mongoose.Schema({
         default: Date.now()
     },
     expiresAt: {
-        type: Date,
+        type: String,
     },
     userId : {
         type: String,
+    },
+    moneyInvested: {
+        type: Number,
+        default: 0
     }
 });
 const Goal = module.exports = mongoose.model('Goal', GoalSchema);

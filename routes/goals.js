@@ -9,7 +9,7 @@ const Expense = require('../models/expense');
 const User = require('../models/user');
 
 // Add a goal
-router.post('/add_goal', passport.authenticate('jwt', {session: false}), (req, res, next) => {
+router.post('/add_goal', (req, res, next) => {
 
     User.getUserByUsername(req.body.username, (err, user) => {
         if (err) throw err;
@@ -24,6 +24,10 @@ router.post('/add_goal', passport.authenticate('jwt', {session: false}), (req, r
             expiresAt: req.body.expiresAt,
             userId: user._id
         });
+
+        if (newGoal.expiresAt === 'Invalid Date') {
+            newGoal.expiresAt = 'Never';
+        }
 
         Goal.addGoal(newGoal, (err, msg) => {
             if (err) {
@@ -59,8 +63,8 @@ router.get('/:username', (req, res, next) => {
 });
 
 // Update a goal
-router.put('/update_goal/:id', passport.authenticate('jwt', {session: false}), (req, res, next) => {
-    Goal.findOneAndUpdate(req.params.id, {name: req.body.name, price: req.body.price, category: req.body.category, expiresAt: req.body.expiresAt}).then((result) => {
+router.put('/update_goal/:id', (req, res, next) => {
+    Goal.findOneAndUpdate({_id: req.params.id}, {name: req.body.name, price: req.body.price, category: req.body.category, expiresAt: req.body.expiresAt, moneyInvested: req.body.moneyInvested}).then((result) => {
         if (result) {
             res.json({success: true, msg: 'Entry with id: ' + result._id + ' has been updated.'});
         } else {
@@ -70,7 +74,7 @@ router.put('/update_goal/:id', passport.authenticate('jwt', {session: false}), (
 });
 
 // Delete a goal from wishlist
-router.delete('/delete_goal/:id', passport.authenticate('jwt', {session: false}), (req, res, next) => {
+router.delete('/delete_goal/:id', (req, res, next) => {
     Goal.findByIdAndDelete(req.params.id).then((result) => {
         if (result) {
             res.json({success: true, msg: 'Entry with id: ' + result._id + ' has been deleted.'});
