@@ -1,0 +1,97 @@
+<div class="container">
+  <br>
+  <br>
+  <div class="row" id="main">
+    <div class="col-md-4 well" id="leftPanel">
+      <div class="row">
+        <div class="col-md-12">
+          <div style="margin-top: 45px;">
+            <div id="info">
+              <div class="form-group infos">
+                <h5>Name</h5>
+                <p>{{user.name}}</p>
+              </div>
+              <div class="form-group infos">
+                <h5>Username</h5>
+                <p>{{user.username}}</p>
+              </div>
+              <div class="form-group infos">
+                <h5>Email</h5>
+                <p>{{user.email}}</p>
+              </div>
+              <div class="form-group infos">
+                <h5>Phone</h5>
+                <p>{{user.phone}}</p>
+              </div>
+              <div class="form-group infos">
+                <h5>Role</h5>
+                <p>{{user.role}}</p>
+              </div>
+              <div class="form-group infos">
+                <h5>First login</h5>
+                <p>{{user.firstLogin | date}}</p>
+              </div>
+              <div class="form-group infos">
+                <h5>Targets</h5>
+                <p>Food: {{user.foodTarget}}</p>
+                <p>Utilities: {{user.utilitiesTarget}}</p>
+                <p>Shopping: {{user.shoppingTarget}}</p>
+                <p>Entertainment: {{user.entertainmentTarget}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8 well" id="rightPanel">
+      <div class="row">
+        <div class="col-md-12">
+          <form onsubmit="return false;">
+            <h2>Edit your profile</h2>
+            <hr class="colorgraph">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input type="text" name="first_name" id="name" class="form-control input-lg" placeholder="Name" tabindex="1">
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <input type="text" name="last_name" id="username" class="form-control input-lg" placeholder="Username" tabindex="2">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+            </div>
+            <div class="form-group">
+              <input type="text" name="phone" id="phone" class="form-control input-lg" placeholder="Phone" tabindex="4">
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-md-6"><button class="btn btn-info btn-block btn-lg" style="margin-left: 190px;" (click)="updateUser()">Save profile</button></div>
+            </div>
+            <hr class="colorgraph">
+            <h2>Set your category targets:</h2>
+            <hr class="colorgraph">
+            <div class="row"></div>
+            <div class="form-group">
+              <input type="text" name="food" id="food" class="form-control input-lg" placeholder="Food target" tabindex="2">
+            </div>
+            <div class="form-group">
+              <input type="text" name="utilities" id="utilities" class="form-control input-lg" placeholder="Utilities target" tabindex="2">
+            </div>
+            <div class="form-group">
+              <input type="text" name="shopping" id="shopping" class="form-control input-lg" placeholder="Shopping target" tabindex="2">
+            </div>
+            <div class="form-group">
+              <input type="text" name="entertainment" id="entertainment" class="form-control input-lg" placeholder="Entertainment target" tabindex="2">
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-md-6"><button class="btn btn-warning btn-block btn-lg" style="margin-left: 190px;" (click)="updateTargets()">Save targets</button></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

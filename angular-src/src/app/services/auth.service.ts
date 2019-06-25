@@ -157,4 +157,50 @@ export class AuthService {
 
     return  false;
   }
+
+  updateUser(user: any) {
+    let headers =  new HttpHeaders();
+    this.loadToken();
+    headers.append('Authorization', this.authToken);
+    headers.append('Content-Type', 'application/json');
+
+    return this.http.put('http://localhost:3000/users/update_user/' + user._id, user,{headers: headers});
+  }
+
+  changeRole(user: any) {
+    let headers =  new HttpHeaders();
+    this.loadToken();
+    headers.append('Authorization', this.authToken);
+    headers.append('Content-Type', 'application/json');
+
+    return this.http.put('http://localhost:3000/users/change_role/' + user._id, user,{headers: headers});
+  }
+
+  changeTargets(user: any) {
+    let headers =  new HttpHeaders();
+    this.loadToken();
+    headers.append('Authorization', this.authToken);
+    headers.append('Content-Type', 'application/json');
+
+    return this.http.put('http://localhost:3000/users/change_targets/' + user._id, user,{headers: headers});
+  }
+
+  changeStatus(user: any) {
+    let headers =  new HttpHeaders();
+    this.loadToken();
+    headers.append('Authorization', this.authToken);
+    headers.append('Content-Type', 'application/json');
+
+    return this.http.put('http://localhost:3000/users/change_status/' + user._id, user,{headers: headers});
+  }
+
+  deleteUser(userId) {
+    let headers =  new HttpHeaders();
+    this.loadToken();
+    headers.append('Authorization', this.authToken);
+    headers.append('Content-Type', 'application/json');
+
+    return this.http.delete('http://localhost:3000/users/delete_user/' + userId,{headers: headers});
+  }
+
 }

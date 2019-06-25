@@ -103,12 +103,17 @@ export class GoalsComponent implements OnInit {
   setupModal(goal?: any) {
     if (goal) {
       this.localGoal = goal;
-      console.log(this.localGoal.moneyInvested);
       $('#manageInvest').val('');
       $('#editName').val(this.localGoal.name);
       $('#editCategory').val(this.localGoal.category);
       $('#editPrice').val(this.localGoal.price);
-      $('#editExpiresAt').val(this.datePipe.transform(this.localGoal.expiresAt, 'yyyy-MM-dd'));
+
+      if (this.localGoal.expiresAt == 'Never') {
+        $('#editExpiresAt').val(this.datePipe.transform('', 'yyyy-MM-dd'));
+      } else {
+        $('#editExpiresAt').val(this.datePipe.transform(this.localGoal.expiresAt, 'yyyy-MM-dd'));
+      }
+
     } else {
       $('#addName').val('');
       $('#addCategory').val('');

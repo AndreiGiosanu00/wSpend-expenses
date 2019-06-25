@@ -24,6 +24,7 @@ import { DashboardCrmModule } from '../dashboard-crm/dashboard-crm.module';
 import { CoreModule } from '../core/core.module';
 import {ExpensesModule} from "../expenses/expenses.module";
 import {GoalsModule} from "../goals/goals.module";
+import {ProfileModule} from "../profile/profile.module";
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import {GoalsModule} from "../goals/goals.module";
         PerfectScrollbarModule,
         ExpensesModule,
         GoalsModule,
-        MatTableModule
+        MatTableModule,
+        ProfileModule
     ],
     declarations: [AuthComponent],
     providers: [

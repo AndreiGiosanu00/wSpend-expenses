@@ -53,24 +53,85 @@ router.post('/authenticate', (req, res, next) => {
         User.comparePassword(password, user.password, (err, isMatch) => {
            if (err) throw  err;
            if (isMatch) {
-               const token = jwt.sign(user.toJSON(), config.secret, {
-                  expiresIn: 604800 // 1 week
-               });
+               if (user.status == 'Active') {
+                   const token = jwt.sign(user.toJSON(), config.secret, {
+                       expiresIn: 604800 // 1 week
+                   });
 
-               res.json({
-                   success: true,
-                   token: 'Bearer ' + token,
-                   user: {
-                       id: user._id,
-                       name: user.name,
-                       username: user.username,
-                       email: user.email
-                   }
-               });
+                   res.json({
+                       success: true,
+                       token: 'Bearer ' + token,
+                       user: {
+                           id: user._id,
+                           name: user.name,
+                           username: user.username,
+                           email: user.email,
+                           phone: user.phone,
+                           role: user.role,
+                           firstLogin: user.firstLogin,
+                           foodTarget: user.foodTarget,
+                           utilitiesTarget: user.utilitiesTarget,
+                           shoppingTarget: user.shoppingTarget,
+                           entertainmentTarget: user.entertainmentTarget
+                       }
+                   });
+               } else {
+                   return res.json({success: false, msg: 'Cannot authenticate. User is suspended.'});
+               }
            } else {
                return res.json({success: false, msg: 'Wrong password'});
            }
         });
+    });
+});
+
+router.put('/update_user/:id', (req, res, next) => {
+    User.findOneAndUpdate({_id: req.params.id}, {name: req.body.name, username: req.body.username, email: req.body.email, phone: req.body.phone}).then((result) => {
+        if (result) {
+            res.json({success: true, msg: 'Entry with id: ' + result._id + ' has been updated.'});
+        } else {
+            res.json({success: false, msg: 'Error when trying to update entry!'})
+        }
+    });
+});
+
+router.delete('/delete_user/:id', (req, res, next) => {
+    User.findByIdAndDelete(req.params.id).then((result) => {
+        if (result) {
+            res.json({success: true, msg: 'Entry with id: ' + result._id + ' has been deleted.'});
+        } else {
+            res.json({success: false, msg: 'Error when trying to delete entry!'})
+        }
+    });
+});
+
+router.put('/change_role/:id', (req, res, next) => {
+    User.findOneAndUpdate({_id: req.params.id}, {role: req.body.role}).then((result) => {
+        if (result) {
+            res.json({success: true, msg: 'Entry with id: ' + result._id + ' has been updated.'});
+        } else {
+            res.json({success: false, msg: 'Error when trying to update entry!'})
+        }
+    });
+});
+
+router.put('/change_status/:id', (req, res, next) => {
+    User.findOneAndUpdate({_id: req.params.id}, {status: req.body.status}).then((result) => {
+        if (result) {
+            res.json({success: true, msg: 'Entry with id: ' + result._id + ' has been updated.'});
+        } else {
+            res.json({success: false, msg: 'Error when trying to update entry!'})
+        }
+    });
+});
+
+router.put('/change_targets/:id', (req, res, next) => {
+    User.findOneAndUpdate({_id: req.params.id}, {foodTarget: req.body.foodTarget, utilitesTarget: req.body.utilitiesTarget, shoppingTarget: req.body.shoppingTarget, entertainmentTarget: req.body.entertainmentTarget}).then((result) => {
+        if (result) {
+            res.json({success: true, msg: 'Entry with id: ' + result._id + ' has been updated.'});
+        } else {
+            res.json({success: false, msg: 'Error when trying to update entry!'})
+        }
     });
 });
 

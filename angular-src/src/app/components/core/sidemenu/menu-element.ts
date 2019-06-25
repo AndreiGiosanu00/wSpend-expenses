@@ -12,15 +12,9 @@ export const menus = [
         'open': false,
     },
     {
-        'name': 'Goals',
+        'name': 'Wishlist',
         'icon': 'view_module',
         'link': '/auth/goals',
         'open': false,
     },
-    {
-        'name': 'leaflet-map',
-        'icon': 'directions',
-        'link': '/maps/leafletmap',
-        'open': false,
-    }
 ];

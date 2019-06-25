@@ -22,6 +22,34 @@ const UserSchema = mongoose.Schema({
     phone: {
         type: String,
         required: true
+    },
+    role: {
+        type: String,
+        default: 'user'
+    },
+    firstLogin: {
+        type: Date,
+        default: Date.now()
+    },
+    status: {
+        type: String,
+        default: 'Active'
+    },
+    foodTarget: {
+        type: Number,
+        default: 1000
+    },
+    utilitiesTarget: {
+        type: Number,
+        default: 1000
+    },
+    shoppingTarget: {
+        type: Number,
+        default: 1000
+    },
+    entertainmentTarget: {
+        type: Number,
+        default: 1000
     }
 });
 

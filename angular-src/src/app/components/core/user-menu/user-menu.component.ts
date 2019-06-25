@@ -40,4 +40,8 @@ export class UserMenuComponent implements OnInit {
   		this.router.navigateByUrl('/login');
 	}
 
+	goToProfile() {
+  		this.router.navigateByUrl('/auth/profile');
+	}
+
 }
