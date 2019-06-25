@@ -84,7 +84,7 @@ router.get('/expenses_year',passport.authenticate('jwt', {session: false}), (req
 
 // Update an expense
 router.put('/update_expense/:id', (req, res, next) => {
-    Expense.findOneAndUpdate(req.params.id, {name: req.body.name, price: req.body.price, category: req.body.category, date: req.body.date}).then((result) => {
+    Expense.findOneAndUpdate({_id: req.params.id}, {name: req.body.name, price: req.body.price, category: req.body.category, date: req.body.date}).then((result) => {
         if (result) {
             res.json({success: true, msg: 'Entry with id: ' + result._id + ' has been updated.'});
         } else {

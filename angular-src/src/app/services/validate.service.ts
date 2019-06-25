@@ -24,4 +24,30 @@ export class ValidateService {
 
   }
 
+  validateExpense(expense: any) {
+    let alerts = {name: '', category: '', price: '', date: ''};
+
+    if (!expense.name) {
+      alerts.name = 'Invalid name';
+    }
+
+    if (!expense.price) {
+      alerts.price = 'Invalid price';
+    }
+
+    if (!expense.category) {
+      alerts.category = 'Please select a category';
+    }
+
+    if (expense.date === 'Invalid Date') {
+      alerts.date = 'Please select a date';
+    }
+
+    return alerts;
+  }
+
+  validateGoal(goal: any) {
+
+  }
+
 }
