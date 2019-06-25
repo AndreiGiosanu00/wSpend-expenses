@@ -25,7 +25,7 @@ router.post('/add_goal', passport.authenticate('jwt', {session: false}), (req, r
             userId: user._id
         });
 
-        Goal.addGoal(newGoal, (err, expense) => {
+        Goal.addGoal(newGoal, (err, msg) => {
             if (err) {
                 res.json({success: false, msg: 'Failed to add goal!'});
             } else {
@@ -36,13 +36,25 @@ router.post('/add_goal', passport.authenticate('jwt', {session: false}), (req, r
 });
 
 // Get all goals for wishlist
-router.get('/', passport.authenticate('jwt', {session: false}),(req, res, next) => {
-    Goal.getGoals({}, (err, result) => {
-        if (err) {
-            res.json({success: false, msg: 'Failed to get data!'});
-        } else {
-            res.json({success: true, goals: result});
+router.get('/:username', (req, res, next) => {
+    User.getUserByUsername(req.params.username, (err, user) => {
+        if (err) throw err;
+        if (!user) {
+            return res.json({success: false, msg: 'User not found!'});
         }
+        Goal.getGoals({}, (err, result) => {
+            if (err) {
+                res.json({success: false, msg: 'Failed to get data!'});
+            } else {
+                let resultReturned = [];
+                result.forEach((goal) => {
+                    if (goal.userId == user._id) {
+                        resultReturned.push(goal);
+                    }
+                });
+                res.json({success: false, goals: resultReturned});
+            }
+        });
     });
 });
 

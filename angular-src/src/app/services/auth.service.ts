@@ -100,7 +100,9 @@ export class AuthService {
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
 
-    return this.http.get('http://localhost:3000/goals/', {headers: headers});
+    let username = JSON.parse(localStorage.getItem('user')).username;
+
+    return this.http.get('http://localhost:3000/goals/' + username, {headers: headers});
   }
 
   updateGoal(goalUpdated) {

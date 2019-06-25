@@ -90,6 +90,8 @@ export class ExpensesComponent implements OnInit {
       $('#addPrice').val('');
       $('#addDate').val(this.datePipe.transform('', 'yyyy-MM-dd'));
     }
+
+    this.unUsefulExpense.active = false;
   }
 
   addExpense() {

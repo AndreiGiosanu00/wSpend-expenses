@@ -1,22 +1,23 @@
 <div class="table-wrapper" style="width: 100%; margin-left: 15px;">
   <div class="table-title">
     <div class="row">
-      <div class="col-sm-6"><h2>Manage <b>Domains</b></h2></div>
+      <div class="col-sm-6"><h2>Wishlist</h2></div>
       <div class="col-sm-6">
         <div class="btn-group" data-toggle="buttons">
-          <label class="btn btn-info active">
-            <input type="radio" name="status" value="all" checked="checked"> All
-          </label>
           <label class="btn btn-success">
-            <input type="radio" name="status" value="active"> Active
+            Active
           </label>
           <label class="btn btn-warning">
-            <input type="radio" name="status" value="inactive"> Inactive
+            Inactive
           </label>
           <label class="btn btn-danger">
-            <input type="radio" name="status" value="expired"> Expired
+            Expired
           </label>
         </div>
+
+        <button href="#addGoalModal" class="btn btn-success" data-toggle="modal" style="margin-left: 410px;">
+          Add New Goal
+        </button>
       </div>
     </div>
   </div>
@@ -24,10 +25,11 @@
     <thead>
     <tr>
       <th>#</th>
-      <th>Domain</th>
+      <th>Goal</th>
+      <th>Category</th>
       <th>Created&nbsp;On</th>
       <th>Status</th>
-      <th>Server&nbsp;Location</th>
+      <th>Expires At</th>
       <th>Action</th>
     </tr>
     </thead>
@@ -35,43 +37,94 @@
     <tr data-status="active">
       <td>1</td>
       <td><a href="#">loremvallis.com</a></td>
-      <td>04/10/2013</td>
-      <td><span class="label label-success">Active</span></td>
       <td>Buenos Aires</td>
-      <td><a href="#" class="btn btn-sm manage">Manage</a></td>
-    </tr>
-    <tr data-status="inactive">
-      <td>2</td>
-      <td><a href="#">quisquamut.net</a></td>
-      <td>05/08/2014</td>
-      <td><span class="label label-warning">Inactive</span></td>
-      <td>Australia</td>
-      <td><a href="#" class="btn btn-sm manage">Manage</a></td>
-    </tr>
-    <tr data-status="active">
-      <td>3</td>
-      <td><a href="#">convallissed.com</a></td>
-      <td>11/05/2015</td>
-      <td><span class="label label-success">Active</span></td>
-      <td>United Kingdom</td>
-      <td><a href="#" class="btn btn-sm manage">Manage</a></td>
-    </tr>
-    <tr data-status="expired">
-      <td>4</td>
-      <td><a href="#">phasellusri.org</a></td>
-      <td>06/09/2016</td>
-      <td><span class="label label-danger">Expired</span></td>
-      <td>Romania</td>
-      <td><a href="#" class="btn btn-sm manage">Manage</a></td>
-    </tr>
-    <tr data-status="inactive">
-      <td>5</td>
-      <td><a href="#">facilisleo.com</a></td>
-      <td>12/08/2017</td>
-      <td><span class="label label-warning">Inactive</span></td>
-      <td>Germany</td>
-      <td><a href="#" class="btn btn-sm manage">Manage</a></td>
+      <td>04/10/2013</td>
+      <td><label class="btn btn-success">Active</label></td>
+      <td>Never</td>
+      <td><button href="#manageModal" data-toggle="modal" class="btn btn-sm manage">Manage</button></td>
     </tr>
     </tbody>
   </table>
+</div>
+
+<!-- Add Modal HTML -->
+<div id="addGoalModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form>
+        <div class="modal-header">
+          <h4 class="modal-title">Add Expense</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label>Name</label>
+            <input id="addName" type="text" class="form-control" placeholder="Enter the name" required>
+          </div>
+          <div class="form-group">
+            <label>Category</label>
+            <select id="addCategory" class="form-control" placeholder="Select the category">
+              <option>Food</option>
+              <option>Utilities</option>
+              <option>Shopping</option>
+              <option>Entertainment</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Price</label>
+            <input id="addPrice" type="text" class="form-control" placeholder="Enter the price" required>
+          </div>
+          <div class="form-group">
+            <label>Date</label>
+            <input id="addDate" type="date" class="form-control" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button class="btn btn-success" >Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Manage Modal HTML -->
+<div id="manageModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form>
+        <div class="modal-header">
+          <h4 class="modal-title">Manage Goal</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label>Name</label>
+            <input id="addName" type="text" class="form-control" placeholder="Enter the name" required>
+          </div>
+          <div class="form-group">
+            <label>Category</label>
+            <select id="addCategory" class="form-control" placeholder="Select the category">
+              <option>Food</option>
+              <option>Utilities</option>
+              <option>Shopping</option>
+              <option>Entertainment</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Price</label>
+            <input id="addPrice" type="text" class="form-control" placeholder="Enter the price" required>
+          </div>
+          <div class="form-group">
+            <label>Date</label>
+            <input id="addDate" type="date" class="form-control" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button class="btn btn-success" >Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>

@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class RecommendationService {
 
-  private targetFood = 1;
+  private targetFood = 1000;
   private targetEntertaiment = 650;
   private targetUtilities = 1200;
   private targetShopping = 800;
