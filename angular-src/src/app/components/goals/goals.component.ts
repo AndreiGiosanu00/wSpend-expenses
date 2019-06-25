@@ -127,11 +127,13 @@ export class GoalsComponent implements OnInit {
 
     this.validators = this.validateService.validateGoal(this.localGoal);
 
-    if (!this.validators.name && !this.validators.category && !this.validators.price && !this.validators.expiresAt) {
+    if (!this.validators.name && !this.validators.category && !this.validators.price) {
+      this.loadingService.show();
       this.authService.addGoal(this.localGoal).subscribe((result) => {
         // add alerts
         this.authService.getAllGoals().subscribe((result: any) => {
           this.goals = result.goals;
+          this.loadingService.hide();
         });
       });
       $('#addGoalModal').modal('hide');
@@ -140,10 +142,12 @@ export class GoalsComponent implements OnInit {
   }
 
   deleteGoal() {
+    this.loadingService.show();
     this.authService.deleteGoal(this.localGoal._id).subscribe((result) => {
       // afisezi alerta
       this.authService.getAllGoals().subscribe((result: any) => {
         this.goals = result.goals;
+        this.loadingService.hide();
       });
     });
   }
@@ -160,13 +164,15 @@ export class GoalsComponent implements OnInit {
 
     this.validators = this.validateService.validateGoal(this.localGoal);
 
-    if (!this.validators.name && !this.validators.category && !this.validators.price && !this.validators.expiresAt) {
+    if (!this.validators.name && !this.validators.category && !this.validators.price) {
+      this.loadingService.show();
       this.authService.updateGoal(this.localGoal).subscribe((result) => {
         // add alerts
         this.authService.getAllGoals().subscribe((result: any) => {
           this.goals = result.goals;
           this.goals.forEach((goal) => {
             this.verifyStatus(goal);
+            this.loadingService.hide();
           });
         });
       });
@@ -182,10 +188,12 @@ export class GoalsComponent implements OnInit {
       let date = new Date();
       this.localGoal.lastInvestedDate = date.toString();
       this.localGoal.status = 'Active';
+      this.loadingService.show();
       this.authService.updateGoal(this.localGoal).subscribe((result) => {
         // add alerts
         this.authService.getAllGoals().subscribe((result: any) => {
           this.goals = result.goals;
+          this.loadingService.hide();
         });
       });
       $('#manageModal').modal('hide');
