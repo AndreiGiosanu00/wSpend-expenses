@@ -16,7 +16,7 @@ const GoalSchema = mongoose.Schema({
     },
     status: {
         type: String,
-        default: 'Inactive'
+        default: 'Active'
     },
     createdOn: {
         type: Date,
@@ -31,6 +31,10 @@ const GoalSchema = mongoose.Schema({
     moneyInvested: {
         type: Number,
         default: 0
+    },
+    lastInvestedDate: {
+        type: Date,
+        default: Date.now()
     }
 });
 const Goal = module.exports = mongoose.model('Goal', GoalSchema);

@@ -64,7 +64,7 @@ router.get('/:username', (req, res, next) => {
 
 // Update a goal
 router.put('/update_goal/:id', (req, res, next) => {
-    Goal.findOneAndUpdate({_id: req.params.id}, {name: req.body.name, price: req.body.price, category: req.body.category, expiresAt: req.body.expiresAt, moneyInvested: req.body.moneyInvested}).then((result) => {
+    Goal.findOneAndUpdate({_id: req.params.id}, {name: req.body.name, price: req.body.price, category: req.body.category, expiresAt: req.body.expiresAt, moneyInvested: req.body.moneyInvested, lastInvestedDate: req.body.lastInvestedDate, status: req.body.status}).then((result) => {
         if (result) {
             res.json({success: true, msg: 'Entry with id: ' + result._id + ' has been updated.'});
         } else {

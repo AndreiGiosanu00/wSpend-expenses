@@ -8,25 +8,27 @@ import {AuthService} from "./services/auth.service";
 import {ValidateService} from "./services/validate.service";
 import {AuthGuard} from "./guards/auth.guard";
 import {RecommendationService} from "./services/recommendation.service";
+import {LoadingModule} from "./components/loading/loading.module";
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
+    declarations: [
+        AppComponent,
 
-  ],
-  imports: [
-    BrowserModule,
-    LazyLoadModule,
-    CoreModule,
-    BrowserAnimationsModule
-  ],
-  providers: [
-      AuthService,
-      ValidateService,
-      RecommendationService,
-      AuthGuard
-  ],
-  bootstrap: [AppComponent]
+    ],
+    imports: [
+        BrowserModule,
+        LazyLoadModule,
+        CoreModule,
+        BrowserAnimationsModule,
+        LoadingModule
+    ],
+    providers: [
+        AuthService,
+        ValidateService,
+        RecommendationService,
+        AuthGuard
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

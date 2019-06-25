@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {AuthService} from "../../services/auth.service";
 import {ValidateService} from "../../services/validate.service";
 import {DatePipe} from "@angular/common";
+import {NgxSpinnerService} from "ngx-spinner";
+import {LoadingService} from "../../services/loading.service";
 
 declare let $: any;
 
@@ -24,13 +26,15 @@ export class GoalsComponent implements OnInit {
     price: '',
     username: '',
     moneyInvested: 0,
-    _id: ''
+    _id: '',
+    lastInvestedDate: '',
+    status: ''
   };
-  private sumToInvest = 0;
 
   constructor(private authService: AuthService,
               private validateService: ValidateService,
-              private datePipe: DatePipe) { }
+              private datePipe: DatePipe,
+              private loadingService: LoadingService) { }
 
   ngOnInit() {
     $('#addGoalModal').appendTo('body');
@@ -38,9 +42,58 @@ export class GoalsComponent implements OnInit {
     $('#editGoalModal').appendTo('body');
     $('#deleteGoalModal').appendTo('body');
 
+    this.loadingService.show();
     this.authService.getAllGoals().subscribe((result: any) => {
       this.goals = result.goals;
+      this.loadingService.hide();
+
+      this.goals.forEach((goal) => {
+        this.verifyStatus(goal);
+      });
     });
+  }
+
+  verifyStatus(goal) {
+    let lastDate = new Date( goal.lastInvestedDate.replace( /(\d{2})-(\d{2})-(\d{4})/, "$2/$1/$3"));
+    let createdOn = new Date( goal.createdOn.replace( /(\d{2})-(\d{2})-(\d{4})/, "$2/$1/$3"));
+    let expiresAt = new Date( goal.expiresAt.replace( /(\d{2})-(\d{2})-(\d{4})/, "$2/$1/$3"));
+    let currentDate = new Date();
+
+    if (this.daysBetween(createdOn, expiresAt) <= 0) {
+      let newGoal = goal;
+      newGoal.status = 'Expired';
+      this.loadingService.show();
+      this.authService.updateGoal(newGoal).subscribe((result) => {
+        this.authService.getAllGoals().subscribe((result: any) => {
+          this.goals = result.goals;
+          this.loadingService.hide();
+        });
+      });
+    } else {
+      if (this.daysBetween(lastDate, currentDate) > 28) {
+        let newGoal = goal;
+        newGoal.status = 'Inactive';
+        this.loadingService.show();
+        this.authService.updateGoal(newGoal).subscribe((result) => {
+          this.authService.getAllGoals().subscribe((result: any) => {
+            this.goals = result.goals;
+            this.loadingService.hide();
+          });
+        });
+      } else {
+        if (goal.status !== 'Active') {
+          let newGoal = goal;
+          newGoal.status = 'Active';
+          this.loadingService.show();
+          this.authService.updateGoal(newGoal).subscribe((result) => {
+            this.authService.getAllGoals().subscribe((result: any) => {
+              this.goals = result.goals;
+              this.loadingService.hide();
+            });
+          });
+        }
+      }
+    }
   }
 
   setupModal(goal?: any) {
@@ -98,18 +151,35 @@ export class GoalsComponent implements OnInit {
       // add alerts
       this.authService.getAllGoals().subscribe((result: any) => {
         this.goals = result.goals;
+        this.goals.forEach((goal) => {
+          this.verifyStatus(goal);
+        });
       });
     });
   }
 
   invest() {
     this.localGoal.moneyInvested += (+$('#manageInvest').val());
+    let date = new Date();
+    this.localGoal.lastInvestedDate = date.toString();
+    this.localGoal.status = 'Active';
     this.authService.updateGoal(this.localGoal).subscribe((result) => {
       // add alerts
       this.authService.getAllGoals().subscribe((result: any) => {
         this.goals = result.goals;
       });
     });
+  }
+
+  treatAsUTC(date): any {
+    let result = new Date(date);
+    result.setMinutes(result.getMinutes() - result.getTimezoneOffset());
+    return result;
+  }
+
+  daysBetween(startDate: any, endDate: any) {
+    let millisecondsPerDay = 24 * 60 * 60 * 1000;
+    return (this.treatAsUTC(endDate) - this.treatAsUTC(startDate)) / millisecondsPerDay;
   }
 
 }

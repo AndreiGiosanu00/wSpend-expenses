@@ -39,7 +39,9 @@
       <td><a href="#">{{goal.name}}</a></td>
       <td>{{goal.category}}</td>
       <td>{{goal.createdOn | date}}</td>
-      <td><label class="btn btn-success">{{goal.status}}</label></td>
+      <td *ngIf="goal.status === 'Active'"><label class="btn btn-success">{{goal.status}}</label></td>
+      <td *ngIf="goal.status === 'Inactive'"><label class="btn btn-warning">{{goal.status}}</label></td>
+      <td *ngIf="goal.status === 'Expired'"><label class="btn btn-danger">{{goal.status}}</label></td>
       <td>{{(goal.expiresAt === 'Never') ? goal.expiresAt : (goal.expiresAt | date)}}</td>
       <td><button href="#manageModal" data-toggle="modal" class="btn btn-sm manage" (click)="setupModal(goal)">Manage</button></td>
     </tr>
@@ -98,12 +100,13 @@
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         </div>
         <div class="modal-body">
-          <div class="alert alert-info">{{'You have invested: ' + localGoal.moneyInvested + ' / ' + localGoal.price}}</div>
+          <div *ngIf="localGoal.status !== 'Expired'" class="alert alert-info">{{'You have invested: ' + localGoal.moneyInvested + ' / ' + localGoal.price}}</div>
+          <div *ngIf="localGoal.status === 'Expired'" class="alert alert-danger">{{'This goal is expired. Edit the goal if you want to use it.'}}</div>
           <div class="form-group">
             <label>Investment</label>
-            <input id="manageInvest" type="text" class="form-control" placeholder="Enter the investment" required>
+            <input id="manageInvest" type="text" class="form-control" placeholder="Enter the investment" required [disabled]="localGoal.status === 'Expired'">
           </div>
-          <button class="btn btn-info" style="width: 400px; margin-left: 30px;" (click)="invest()" data-dismiss="modal">Invest</button>
+          <button class="btn btn-info" style="width: 400px; margin-left: 30px;" (click)="invest()" data-dismiss="modal" [disabled]="localGoal.status === 'Expired'">Invest</button>
         </div>
         <div class="modal-footer">
           <button class="btn btn-default" data-dismiss="modal" style="margin-right: 185px;">Cancel</button>
@@ -143,7 +146,7 @@
             <input id="editPrice" type="text" class="form-control" placeholder="Enter the price" required>
           </div>
           <div class="form-group">
-            <label>Date</label>
+            <label>Expires At</label>
             <input id="editExpiresAt" type="date" class="form-control" required>
           </div>
         </div>
