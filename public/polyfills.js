@@ -1,28 +1,5 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["polyfills"],{
 
-/***/ "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js":
-/*!**************************************************************************************************!*\
-  !*** ./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js ***!
-  \**************************************************************************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_es7_reflect__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/es7/reflect */ "./node_modules/core-js/es7/reflect.js");
-/* harmony import */ var core_js_es7_reflect__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_es7_reflect__WEBPACK_IMPORTED_MODULE_0__);
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/es7/reflect.js":
 /*!*********************************************!*\
   !*** ./node_modules/core-js/es7/reflect.js ***!
@@ -598,7 +575,7 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
     // early implementations not supports chaining
     var HASNT_CHAINING = instance[ADDER](IS_WEAK ? {} : -0, 1) != instance;
     // V8 ~  Chromium 40- weak-collections throws on primitives, but should return false
-    var THROcdk_ON_PRIMITIVES = fails(function () { instance.has(1); });
+    var THROWS_ON_PRIMITIVES = fails(function () { instance.has(1); });
     // most early implementations doesn't supports iterables, most modern - not close it correctly
     var ACCEPT_ITERABLES = $iterDetect(function (iter) { new C(iter); }); // eslint-disable-line no-new
     // for early implementations -0 and +0 not the same
@@ -619,7 +596,7 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
       C.prototype = proto;
       proto.constructor = C;
     }
-    if (THROcdk_ON_PRIMITIVES || BUGGY_ZERO) {
+    if (THROWS_ON_PRIMITIVES || BUGGY_ZERO) {
       fixMethod('delete');
       fixMethod('has');
       IS_MAP && fixMethod('get');
@@ -649,7 +626,7 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var core = module.exports = { version: '2.6.8' };
+var core = module.exports = { version: '2.6.9' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
@@ -3214,7 +3191,7 @@ Zone.__load_patch('ZoneAwarePromise', function (global, Zone, api) {
             // if the promise is rejected no catch status
             // and queue.length > 0, means there is a error handler
             // here to handle the rejected promise, we should trigger
-            // windocdk.rejectionhandled eventHandler or nodejs rejectionHandled
+            // windows.rejectionhandled eventHandler or nodejs rejectionHandled
             // eventHandler
             try {
                 var handler = Zone[REJECTION_HANDLED_HANDLER];
@@ -3293,10 +3270,10 @@ Zone.__load_patch('ZoneAwarePromise', function (global, Zone, api) {
                 reject = rej;
             });
             function onResolve(value) {
-                promise && (promise =  false || resolve(value));
+                promise && (promise = null || resolve(value));
             }
             function onReject(error) {
-                promise && (promise =  false || reject(error));
+                promise && (promise = null || reject(error));
             }
             try {
                 for (var values_1 = __values(values), values_1_1 = values_1.next(); !values_1_1.done; values_1_1 = values_1.next()) {
@@ -3732,7 +3709,7 @@ function patchProperty(obj, prop, prototype) {
         eventNameSymbol = zoneSymbolEventNames[eventName] = zoneSymbol('ON_PROPERTY' + eventName);
     }
     desc.set = function (newValue) {
-        // in some of windocdk's onproperty callback, this is undefined
+        // in some of windows's onproperty callback, this is undefined
         // so we need to check it
         var target = this;
         if (!target && obj === _global) {
@@ -3761,7 +3738,7 @@ function patchProperty(obj, prop, prototype) {
     // The getter would return undefined for unassigned properties but the default value of an
     // unassigned property is null
     desc.get = function () {
-        // in some of windocdk's onproperty callback, this is undefined
+        // in some of windows's onproperty callback, this is undefined
         // so we need to check it
         var target = this;
         if (!target && obj === _global) {
@@ -4861,14 +4838,14 @@ function _tryDefineProperty(obj, prop, desc, originalConfigurableFlag) {
  */
 // we have to patch the instance since the proto is non-configurable
 function apply(api, _global) {
-    var cdk = _global.WebSocket;
-    // On Safari window.EventTarget doesn't exist so need to patch cdk add/removeEventListener
+    var WS = _global.WebSocket;
+    // On Safari window.EventTarget doesn't exist so need to patch WS add/removeEventListener
     // On older Chrome, no need since EventTarget was already patched
     if (!_global.EventTarget) {
-        patchEventTarget(_global, [cdk.prototype]);
+        patchEventTarget(_global, [WS.prototype]);
     }
     _global.WebSocket = function (x, y) {
-        var socket = arguments.length > 1 ? new cdk(x, y) : new cdk(x);
+        var socket = arguments.length > 1 ? new WS(x, y) : new WS(x);
         var proxySocket;
         var proxySocketProto;
         // Safari 7.0 has non-configurable own 'onmessage' and friends properties on the socket instance
@@ -4901,8 +4878,8 @@ function apply(api, _global) {
         return proxySocket;
     };
     var globalWebSocket = _global['WebSocket'];
-    for (var prop in cdk) {
-        globalWebSocket[prop] = cdk[prop];
+    for (var prop in WS) {
+        globalWebSocket[prop] = WS[prop];
     }
 }
 
@@ -5325,7 +5302,7 @@ function eventTargetPatch(_global, api) {
     var ieOrEdge = isIEOrEdge();
     var ADD_EVENT_LISTENER_SOURCE = '.addEventListener:';
     var FUNCTION_WRAPPER = '[object FunctionWrapper]';
-    var BROcdkER_TOOLS = 'function __BROcdkERTOOLS_CONSOLE_SAFEFUNC() { [native code] }';
+    var BROWSER_TOOLS = 'function __BROWSERTOOLS_CONSOLE_SAFEFUNC() { [native code] }';
     //  predefine all __zone_symbol__ + eventName + true/false string
     for (var i = 0; i < eventNames.length; i++) {
         var eventName = eventNames[i];
@@ -5351,7 +5328,7 @@ function eventTargetPatch(_global, api) {
             if (isEnableCrossContextCheck) {
                 try {
                     var testString = delegate.toString();
-                    if ((testString === FUNCTION_WRAPPER || testString == BROcdkER_TOOLS)) {
+                    if ((testString === FUNCTION_WRAPPER || testString == BROWSER_TOOLS)) {
                         nativeDelegate.apply(target, args);
                         return false;
                     }
@@ -5363,7 +5340,7 @@ function eventTargetPatch(_global, api) {
             }
             else {
                 var testString = delegate.toString();
-                if ((testString === FUNCTION_WRAPPER || testString == BROcdkER_TOOLS)) {
+                if ((testString === FUNCTION_WRAPPER || testString == BROWSER_TOOLS)) {
                     nativeDelegate.apply(target, args);
                     return false;
                 }
@@ -5679,7 +5656,7 @@ Zone.__load_patch('PromiseRejectionEvent', function (global, Zone) {
         return function (e) {
             var eventTasks = findEventTasks(global, evtName);
             eventTasks.forEach(function (eventTask) {
-                // windocdk has added unhandledrejection event listener
+                // windows has added unhandledrejection event listener
                 // trigger the event listener
                 var PromiseRejectionEvent = global['PromiseRejectionEvent'];
                 if (PromiseRejectionEvent) {
@@ -5719,8 +5696,10 @@ Zone.__load_patch('PromiseRejectionEvent', function (global, Zone) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var zone_js_dist_zone__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! zone.js/dist/zone */ "./node_modules/zone.js/dist/zone.js");
-/* harmony import */ var zone_js_dist_zone__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(zone_js_dist_zone__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_es7_reflect__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/es7/reflect */ "./node_modules/core-js/es7/reflect.js");
+/* harmony import */ var core_js_es7_reflect__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_es7_reflect__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var zone_js_dist_zone__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zone.js/dist/zone */ "./node_modules/zone.js/dist/zone.js");
+/* harmony import */ var zone_js_dist_zone__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(zone_js_dist_zone__WEBPACK_IMPORTED_MODULE_1__);
 /**
  * This file includes polyfills needed by Angular and is loaded before the app.
  * You can add your own extra polyfills to this file.
@@ -5734,65 +5713,69 @@ __webpack_require__.r(__webpack_exports__);
  * automatically update themselves. This includes Safari >= 10, Chrome >= 55 (including Opera),
  * Edge >= 13 on the desktop, and iOS 10 and Chrome on mobile.
  *
- * Learn more in https://angular.io/guide/browser-support
+ * Learn more in https://angular.io/docs/ts/latest/guide/browser-support.html
  */
 /***************************************************************************************************
- * BROcdkER POLYFILLS
+ * BROWSER POLYFILLS
  */
+/** IE9, IE10 and IE11 requires all of the following polyfills. **/
+// import 'core-js/es6/symbol';
+// import 'core-js/es6/object';
+// import 'core-js/es6/function';
+// import 'core-js/es6/parse-int';
+// import 'core-js/es6/parse-float';
+// import 'core-js/es6/number';
+// import 'core-js/es6/math';
+// import 'core-js/es6/string';
+// import 'core-js/es6/date';
+// import 'core-js/es6/array';
+// import 'core-js/es6/regexp';
+// import 'core-js/es6/map';
+// import 'core-js/es6/weak-map';
+// import 'core-js/es6/set';
 /** IE10 and IE11 requires the following for NgClass support on SVG elements */
 // import 'classlist.js';  // Run `npm install --save classlist.js`.
+/** IE10 and IE11 requires the following for the Reflect API. */
+// import 'core-js/es6/reflect';
+/** Evergreen browsers require these. **/
+// Used for reflect-metadata in JIT. If you use AOT (and only Angular decorators), you can remove.
+
 /**
- * Web Animations `@angular/platform-browser/animations`
- * Only required if AnimationBuilder is used within the application and using IE/Edge or Safari.
- * Standard animation support in Angular DOES NOT require any polyfills (as of Angular 6.0).
- */
+ * Required to support Web Animations `@angular/platform-browser/animations`.
+ * Needed for: All but Chrome, Firefox and Opera. http://caniuse.com/#feat=web-animation
+ **/
 // import 'web-animations-js';  // Run `npm install --save web-animations-js`.
-/**
- * By default, zone.js will patch all possible macroTask and DomEvents
- * user can disable parts of macroTask/DomEvents patch by setting following flags
- * because those flags need to be set before `zone.js` being loaded, and webpack
- * will put import in the top of bundle, so user need to create a separate file
- * in this directory (for example: zone-flags.ts), and put the following flags
- * into that file, and then add the following code before importing zone.js.
- * import './zone-flags.ts';
- *
- * The flags allowed in zone-flags.ts are listed here.
- *
- * The following flags will work for all browsers.
- *
- * (window as any).__Zone_disable_requestAnimationFrame = true; // disable patch requestAnimationFrame
- * (window as any).__Zone_disable_on_property = true; // disable patch onProperty such as onclick
- * (window as any).__zone_symbol__BLACK_LISTED_EVENTS = ['scroll', 'mousemove']; // disable patch specified eventNames
- *
- *  in IE/Edge developer tools, the addEventListener will also be wrapped by zone.js
- *  with the following flag, it will bypass `zone.js` patch for IE/Edge
- *
- *  (window as any).__Zone_enable_cross_context_check = true;
- *
- */
 /***************************************************************************************************
- * Zone JS is required by default for Angular itself.
+ * Zone JS is required by Angular itself.
  */
  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+/**
+ * Date, currency, decimal and percent pipes.
+ * Needed for: All but Chrome, Firefox, Edge, IE11 and Safari 10
+ */
+// import 'intl';  // Run `npm install --save intl`.
+/**
+ * Need to import at least one locale-data with intl.
+ */
+// import 'intl/locale-data/jsonp/en';
 
 
 /***/ }),
 
-/***/ 2:
-/*!***************************************************************************************************************************!*\
-  !*** multi ./src/polyfills.ts ./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js ***!
-  \***************************************************************************************************************************/
+/***/ 1:
+/*!********************************!*\
+  !*** multi ./src/polyfills.ts ***!
+  \********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/andrei/Desktop/cdkpend/angular-src/src/polyfills.ts */"./src/polyfills.ts");
-module.exports = __webpack_require__(/*! /home/andrei/Desktop/cdkpend/angular-src/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js */"./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js");
+module.exports = __webpack_require__(/*! /home/andrei/Desktop/wSpend-expenses/angular-src/src/polyfills.ts */"./src/polyfills.ts");
 
 
 /***/ })
 
-},[[2,"runtime"]]]);
+},[[1,"runtime"]]]);
 //# sourceMappingURL=polyfills.js.map
