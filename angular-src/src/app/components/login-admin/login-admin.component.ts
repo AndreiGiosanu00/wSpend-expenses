@@ -4,6 +4,9 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import {HttpClient} from "@angular/common/http";
 import {AuthService} from "../../services/auth.service";
 import {AlertsService} from "../../services/alerts.service";
+
+declare let $: any;
+
 @Component({
   selector: 'app-login-admin',
   templateUrl: './login-admin.component.html',
@@ -36,6 +39,7 @@ export class LoginAdminComponent implements OnInit {
   }
 
   ngOnInit() {
+    $('body').css('overflow', 'hidden');
     this.buildForm();
   }
 
@@ -87,6 +91,7 @@ export class LoginAdminComponent implements OnInit {
     this.authService.loginAdmin(user).subscribe((response: any) => {
       if (response.success) {
         response.user.role = 'admin';
+        localStorage.setItem('admin', JSON.stringify({logged: true}));
         this.authService.storeUserData(response.token, response.user);
         // this.flashMessages.show('You have successfully login!', {cssClass: 'alert-success', timeout: 3000});
         this.router.navigateByUrl('/auth/admin');

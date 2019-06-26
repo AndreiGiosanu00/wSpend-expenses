@@ -5,6 +5,8 @@ import {AuthService} from "../../services/auth.service";
 import {HttpClient} from "@angular/common/http";
 import {ValidateService} from "../../services/validate.service";
 
+declare let $: any;
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -58,6 +60,7 @@ export class RegisterComponent implements OnInit {
               private validateService: ValidateService) { }
 
   ngOnInit() {
+    $('body').css('overflow', 'hidden');
     this.buildForm();
   }
 

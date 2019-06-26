@@ -4,6 +4,9 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import {AuthService} from "../../../services/auth.service";
 import {HttpClient} from "@angular/common/http";
 import {AlertsService} from "../../../services/alerts.service";
+
+declare let $: any;
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -36,6 +39,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    $('body').css('overflow', 'hidden');
     this.buildForm();
   }
 
