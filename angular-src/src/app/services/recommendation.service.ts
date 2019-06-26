@@ -24,7 +24,6 @@ export class RecommendationService {
     });
 
     if (expenseCategory === 'Food') {
-      console.log('da', targetFood);
       if (total > targetFood) {
         return false;
       }

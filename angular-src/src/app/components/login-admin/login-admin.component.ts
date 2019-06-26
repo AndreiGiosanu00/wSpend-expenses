@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import {HttpClient} from "@angular/common/http";
 import {AuthService} from "../../services/auth.service";
+import {AlertsService} from "../../services/alerts.service";
 @Component({
   selector: 'app-login-admin',
   templateUrl: './login-admin.component.html',
@@ -30,7 +31,8 @@ export class LoginAdminComponent implements OnInit {
   constructor(private router: Router,
               private fb: FormBuilder,
               private authService: AuthService,
-              private http: HttpClient) {
+              private http: HttpClient,
+              private alertsService: AlertsService) {
   }
 
   ngOnInit() {
@@ -89,11 +91,19 @@ export class LoginAdminComponent implements OnInit {
         // this.flashMessages.show('You have successfully login!', {cssClass: 'alert-success', timeout: 3000});
         this.router.navigateByUrl('/auth/admin');
       } else {
+        this.alertsService.dangerAlert = {
+          active: true,
+          text: response.msg
+        };
         // this.flashMessages.show(response.msg, {cssClass: 'alert-danger', timeout: 5000});
         this.router.navigateByUrl('/admin/login');
       }
     });
 
+  }
+
+  closeDangerAlert() {
+    this.alertsService.dangerAlert.active = false;
   }
 }
 

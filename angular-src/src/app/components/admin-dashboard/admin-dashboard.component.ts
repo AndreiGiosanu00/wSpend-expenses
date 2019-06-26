@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from "../../services/auth.service";
 import {LoadingService} from "../../services/loading.service";
+import {AlertsService} from "../../services/alerts.service";
 
 declare let $: any;
 
@@ -22,7 +23,8 @@ export class AdminDashboardComponent implements OnInit {
   };
 
   constructor(private authService: AuthService,
-              private loadingService: LoadingService) { }
+              private loadingService: LoadingService,
+              private alertsService: AlertsService) { }
 
   ngOnInit() {
 
@@ -70,8 +72,18 @@ export class AdminDashboardComponent implements OnInit {
       };
 
       this.loadingService.show();
-      this.authService.addUser(newUser).subscribe((result) => {
-        // alerts here
+      this.authService.addUser(newUser).subscribe((result: any) => {
+        if (result.success) {
+          this.alertsService.infoAlert = {
+            active: true,
+            text: 'User successfully added.'
+          };
+        } else {
+          this.alertsService.dangerAlert = {
+            active: true,
+            text: 'Error. Failed to add user.'
+          };
+        }
         this.authService.getAllUsers().subscribe((res: any) => {
           this.users = res.users;
           this.loadingService.hide();
@@ -90,9 +102,18 @@ export class AdminDashboardComponent implements OnInit {
     };
 
     this.loadingService.show();
-    console.log('da');
-    this.authService.changeRole(editedUser).subscribe((res) => {
-        // alerts here
+    this.authService.changeRole(editedUser).subscribe((res: any) => {
+      if (res.success) {
+        this.alertsService.infoAlert = {
+          active: true,
+          text: 'User ' + editedUser.name + ' have been successfully edited.'
+        };
+      } else {
+        this.alertsService.dangerAlert = {
+          active: true,
+          text: 'Error. Failed to edit user.'
+        };
+      }
       this.authService.getAllUsers().subscribe((result: any) => {
         this.users = result.users;
         this.loadingService.hide();
@@ -103,8 +124,18 @@ export class AdminDashboardComponent implements OnInit {
 
   deleteUser() {
     this.loadingService.show();
-    this.authService.deleteUser(this.localUser._id).subscribe((result) => {
-      // afisezi alerta
+    this.authService.deleteUser(this.localUser._id).subscribe((result: any) => {
+      if (result.success) {
+        this.alertsService.infoAlert = {
+          active: true,
+          text: 'User ' + this.localUser.name + ' successfully deleted.'
+        };
+      } else {
+        this.alertsService.dangerAlert = {
+          active: true,
+          text: 'Error. Failed to delete user.'
+        };
+      }
       this.authService.getAllUsers().subscribe((result: any) => {
         this.users = result.users;
         this.loadingService.hide();
