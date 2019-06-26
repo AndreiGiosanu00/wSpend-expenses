@@ -29,7 +29,7 @@ const goals = require('./routes/goals');
 const report = require('./routes/report-by-email');
 
 // Port Number
-const port = process.env.PORT || 8080;
+const port = 3000;
 
 // CORS Middleware
 app.use(cors());
