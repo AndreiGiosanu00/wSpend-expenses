@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b4f8298-0f47-4a1f-bf6a-70b73f930f11" name="Default Changelist" comment="Add expenses page layout.">
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/profile/profile.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/profile/profile.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/profile/profile.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/admin-dashboard/admin-dashboard.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/admin-dashboard/admin-dashboard.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/admin-dashboard/admin-dashboard.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/admin-dashboard/admin-dashboard.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/admin-dashboard/admin-dashboard.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/login-admin/login-admin.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/login-admin/login-admin.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/login-admin/login-admin.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/login-admin/login-admin.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-src/src/app/components/login-admin/login-admin.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-src/src/app/guards/admin.guard.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../angular-src/.editorconfig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../angular-src/.gitignore" beforeDir="false" />
@@ -2222,26 +2230,12 @@
       <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../routes/users.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-src/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/components/auth/auth.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/auth/lazyloader.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/components/auth/lazyloader.routes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/core/sidemenu/menu-element.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/sidemenu/menu-element.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/core/toolbar/toolbar.helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/toolbar/toolbar.helpers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/core/user-menu/user-menu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/user-menu/user-menu.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/core/user-menu/user-menu.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/components/core/user-menu/user-menu.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/goals/goals.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/components/goals/goals.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/goals/goals.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/components/goals/goals.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/maps/google-map/google-map.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/maps/google-map/google-map.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/components/profile/profile.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/maps/google-map/google-map.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/components/profile/profile.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/maps/google-map/google-map.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/maps/leaflet-map/leaflet-map.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/maps/leaflet-map/leaflet-map.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/maps/leaflet-map/leaflet-map.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/maps/leaflet-map/leaflet-map.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/maps/maps.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/maps/maps.router.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-src/src/app/components/lazy-load/lazy-load.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/components/lazy-load/lazy-load.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -2257,45 +2251,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/profile/profile.component.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/expenses/expenses.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="108" column="112" lean-forward="true" selection-start-line="108" selection-start-column="112" selection-end-line="108" selection-end-column="112" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/profile/profile.component.html">
+        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin-dashboard/admin-dashboard.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="345">
+              <caret line="26" column="114" selection-start-line="26" selection-start-column="114" selection-end-line="26" selection-end-column="114" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#9;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#1001#1007#1" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/profile/profile.component.ts">
+        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin-dashboard/admin-dashboard.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+            <state relative-caret-position="270">
+              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -2304,10 +2278,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/user.js">
+        <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="66" selection-start-line="66" selection-end-line="66" />
+            <state relative-caret-position="431">
+              <caret line="237" lean-forward="true" selection-start-line="237" selection-end-line="237" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin-dashboard/admin-dashboard.component.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="155" column="1" selection-start-line="155" selection-start-column="1" selection-end-line="155" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -2324,12 +2310,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Register an</find>
-      <find>mat-sidenav-</find>
-      <find>addEmployeeModal</find>
-      <find>deleteEmployeeModal</find>
-      <find>this.user</find>
-      <find>date</find>
       <find>addValidators</find>
       <find>editEmplo</find>
       <find>dete</find>
@@ -2354,6 +2334,12 @@
       <find>h3</find>
       <find>localStorage.setItem</find>
       <find>storeUserData</find>
+      <find>Report</find>
+      <find>/problem</find>
+      <find>report</find>
+      <find>auth</find>
+      <find>LoginModule</find>
+      <find>Wishlist</find>
     </findStrings>
     <replaceStrings>
       <replace>user-image.png</replace>
@@ -2385,19 +2371,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/tables/feature-table/feature-table.component.ts" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/tables/feature-table/helpers.data.ts" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/core/sidebar/sidebar.component.html" />
-        <option value="$PROJECT_DIR$/routes/report-by-email.js" />
-        <option value="$PROJECT_DIR$/models/send-sms.js" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/dashboard-crm/dashboard-crm.component.scss" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/expenses/expenses.component.scss" />
-        <option value="$PROJECT_DIR$/angular-src/angular.json" />
-        <option value="$PROJECT_DIR$/angular-src/package.json" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/pages/login/login.component.html" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/auth/auth.component.html" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/lazy-load/lazy-load.module.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/core/sidemenu/sidemenu.component.html" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/models/expense.js" />
@@ -2420,22 +2394,34 @@
         <option value="$PROJECT_DIR$/angular-src/src/app/components/dashboard-widget/doughnut-graph/doughnut-graph.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/dashboard-crm/dashboard-crm.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/dashboard-crm/dashboard-crm.component.html" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/core/sidemenu/menu-element.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/goals/goals.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/goals/goals.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/profile/profile.module.ts" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/auth/auth.module.ts" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/auth/lazyloader.routes.ts" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/core/user-menu/user-menu.component.html" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/core/user-menu/user-menu.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/profile/profile.component.scss" />
         <option value="$PROJECT_DIR$/models/user.js" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/core/toolbar/toolbar.helpers.ts" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/profile/profile.component.ts" />
-        <option value="$PROJECT_DIR$/routes/users.js" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/profile/profile.component.html" />
+        <option value="$PROJECT_DIR$/routes/report-by-email.js" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/core/user-menu/user-menu.component.html" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/core/user-menu/user-menu.component.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/login-admin/login-admin.module.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/guards/auth.guard.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/guards/admin.guard.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/lazy-load/lazy-load.module.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/profile/profile.component.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/login-admin/login-admin.component.html" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/admin-dashboard/admin-dashboard.module.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/auth/auth.module.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/auth/lazyloader.routes.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/login-admin/login-admin.component.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/pages/login/login.component.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/admin-dashboard/admin-dashboard.component.scss" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/core/sidemenu/menu-element.ts" />
+        <option value="$PROJECT_DIR$/routes/users.js" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/admin-dashboard/admin-dashboard.component.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/admin-dashboard/admin-dashboard.component.html" />
       </list>
     </option>
   </component>
@@ -2493,7 +2479,24 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="profile" type="462c0819:PsiDirectoryNode" />
+              <item name="admin-dashboard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wSpend-expenses" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wSpend-expenses" type="462c0819:PsiDirectoryNode" />
+              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="login-admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wSpend-expenses" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wSpend-expenses" type="462c0819:PsiDirectoryNode" />
+              <item name="angular-src" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="guards" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wSpend-expenses" type="b2602c69:ProjectViewProjectNode" />
@@ -2568,7 +2571,7 @@
       <workItem from="1561230584109" duration="2050000" />
       <workItem from="1561303351149" duration="2428000" />
       <workItem from="1561354772833" duration="30559000" />
-      <workItem from="1561460901445" duration="36793000" />
+      <workItem from="1561460901445" duration="43822000" />
     </task>
     <task id="LOCAL-00001" summary="Fix style for dashboard.">
       <created>1561232825503</created>
@@ -2703,11 +2706,25 @@
       <option name="project" value="LOCAL" />
       <updated>1561489603952</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Add profile page.">
+      <created>1561499612820</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1561499612820</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Add report by email modal and functionality.">
+      <created>1561501192185</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1561501192185</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143027000" />
+    <option name="totallyTimeSpent" value="150056000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
@@ -2761,157 +2778,11 @@
     <MESSAGE value="Add goal validators." />
     <MESSAGE value="Add loading in goals page." />
     <MESSAGE value="Add functionality to dashboard." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add functionality to dashboard." />
+    <MESSAGE value="Add profile page." />
+    <MESSAGE value="Add report by email modal and functionality." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add report by email modal and functionality." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/goals/goals.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="65" column="1" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/auth/auth.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding>
-            <element signature="n#style#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#mat-sidenav#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#mat-toolbar#0;n#mat-sidenav#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#h1#0;n#mat-toolbar#0;n#mat-sidenav#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#mat-sidenav-content#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#mat-drawer#0;n#mat-drawer-container#0;n#mat-sidenav-content#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#mat-drawer-content#0;n#mat-drawer-container#0;n#mat-sidenav-content#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#cdk-toolbar#0;n#mat-drawer-content#0;n#mat-drawer-container#0;n#mat-sidenav-content#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#perfect-scrollbar#0;n#mat-drawer-content#0;n#mat-drawer-container#0;n#mat-sidenav-content#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#mat-sidenav#1;n#mat-sidenav-container#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="1942" selection-start-line="1942" selection-end-line="1942" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/lazy-load/lazy-load.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/pages/login/login.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/pages/login/login.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="40" column="35" lean-forward="true" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/node_modules/@angular/common/src/i18n/format_date.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/node_modules/typescript/lib/lib.es5.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="794" column="4" selection-start-line="794" selection-start-column="4" selection-end-line="794" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/expenses/expenses.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/recommendation.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/expense.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/expenses.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="51" column="53" lean-forward="true" selection-start-line="51" selection-start-column="53" selection-end-line="51" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/modal/modal.component.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/node_modules/@types/jasmine/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="721" column="15" selection-start-line="721" selection-start-column="15" selection-end-line="721" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/validate.service.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/auth/auth.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/loading/loading.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -2986,13 +2857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/core/sidemenu/menu-element.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/dashboard-crm/dashboard-crm.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -3002,13 +2866,6 @@
             <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/goal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="30" column="17" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -3029,56 +2886,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/goals/goals.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="148" column="90" lean-forward="true" selection-start-line="148" selection-start-column="90" selection-end-line="148" selection-end-column="90" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/goals/goals.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/auth/lazyloader.routes.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="13" column="54" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/auth/auth.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="44" column="21" lean-forward="true" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="10" column="66" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/profile/profile.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -3086,20 +2893,6 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/core/user-menu/user-menu.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/core/user-menu/user-menu.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="28" column="42" lean-forward="true" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -3113,23 +2906,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/goals.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="76" selection-start-line="76" selection-end-line="84" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/goals/goals.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="104" column="28" selection-start-line="104" selection-start-column="28" selection-end-line="104" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/core/toolbar/toolbar.helpers.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -3139,28 +2915,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/expenses/expenses.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="108" column="112" lean-forward="true" selection-start-line="108" selection-start-column="112" selection-end-line="108" selection-end-column="112" />
+        <state relative-caret-position="105">
+          <caret line="103" column="45" lean-forward="true" selection-start-line="103" selection-start-column="45" selection-end-line="103" selection-end-column="45" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="164" column="55" lean-forward="true" selection-start-line="164" selection-start-column="55" selection-end-line="164" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="88" column="143" selection-start-line="88" selection-start-column="143" selection-end-line="88" selection-end-column="143" />
         </state>
       </provider>
     </entry>
@@ -3171,12 +2930,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/profile/profile.component.ts">
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/goals/goals.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+        <state relative-caret-position="131">
+          <caret line="170" selection-start-line="170" selection-end-line="190" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/goals/goals.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="43" column="4" lean-forward="true" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="40" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/report-by-email.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/core/user-menu/user-menu.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="19" column="93" selection-start-line="19" selection-start-column="93" selection-end-line="19" selection-end-column="93" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/core/user-menu/user-menu.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="45" column="44" lean-forward="true" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/register/register.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-619">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3184,10 +2989,219 @@
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/profile/profile.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#9;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/pages/login/login.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="28" column="37" lean-forward="true" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/node_modules/@angular/router/src/config.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="357" column="4" selection-start-line="357" selection-start-column="4" selection-end-line="357" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/guards/admin.guard.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/guards/auth.guard.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="47" lean-forward="true" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/lazy-load/lazy-load.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/login-admin/login-admin.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="34" column="14" lean-forward="true" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/profile/profile.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="46" column="34" lean-forward="true" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/pages/login/login.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="19" column="40" lean-forward="true" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/node_modules/typescript/lib/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="7293" column="4" selection-start-line="7293" selection-start-column="4" selection-end-line="7293" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/goals/goals.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="2" lean-forward="true" selection-end-line="18" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/auth/auth.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin-dashboard/admin-dashboard.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="55" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/auth/lazyloader.routes.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/pages/login/login.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="85" column="29" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/login-admin/login-admin.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="27" column="107" lean-forward="true" selection-start-line="27" selection-start-column="107" selection-end-line="27" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/login-admin/login-admin.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="86" column="37" lean-forward="true" selection-start-line="86" selection-start-column="37" selection-end-line="86" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/core/sidemenu/menu-element.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="43" column="7" lean-forward="true" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/goal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/goals.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="48" column="15" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="191" column="7" lean-forward="true" selection-start-line="191" selection-start-column="7" selection-end-line="191" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin-dashboard/admin-dashboard.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="155" column="1" selection-start-line="155" selection-start-column="1" selection-end-line="155" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin-dashboard/admin-dashboard.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="237" lean-forward="true" selection-start-line="237" selection-end-line="237" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/assets/user-image.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/admin-dashboard/admin-dashboard.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="26" column="114" selection-start-line="26" selection-start-column="114" selection-end-line="26" selection-end-column="114" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#1001#1007#1" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -25,6 +25,7 @@ import { CoreModule } from '../core/core.module';
 import {ExpensesModule} from "../expenses/expenses.module";
 import {GoalsModule} from "../goals/goals.module";
 import {ProfileModule} from "../profile/profile.module";
+import {AdminDashboardModule} from "../admin-dashboard/admin-dashboard.module";
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import {ProfileModule} from "../profile/profile.module";
         ExpensesModule,
         GoalsModule,
         MatTableModule,
-        ProfileModule
+        ProfileModule,
+        AdminDashboardModule
     ],
     declarations: [AuthComponent],
     providers: [

@@ -9,12 +9,12 @@ import {ValidateService} from "./services/validate.service";
 import {AuthGuard} from "./guards/auth.guard";
 import {RecommendationService} from "./services/recommendation.service";
 import {LoadingModule} from "./components/loading/loading.module";
+import {AdminGuard} from "./guards/admin.guard";
 
 
 @NgModule({
     declarations: [
         AppComponent,
-
     ],
     imports: [
         BrowserModule,
@@ -27,7 +27,8 @@ import {LoadingModule} from "./components/loading/loading.module";
         AuthService,
         ValidateService,
         RecommendationService,
-        AuthGuard
+        AuthGuard,
+        AdminGuard
     ],
     bootstrap: [AppComponent]
 })

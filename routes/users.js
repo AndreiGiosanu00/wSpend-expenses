@@ -85,6 +85,52 @@ router.post('/authenticate', (req, res, next) => {
     });
 });
 
+// Autentificarea
+router.post('/admin/login', (req, res, next) => {
+    const username = req.body.username;
+    const password = req.body.password;
+
+    User.getUserByUsername(username, (err, user) => {
+        if (err) throw err;
+        if (!user) {
+            return res.json({success: false, msg: 'User not found!'});
+        }
+
+        User.comparePassword(password, user.password, (err, isMatch) => {
+            if (err) throw  err;
+            if (!isMatch) {
+                if (user.status == 'Active') {
+                    const token = jwt.sign(user.toJSON(), config.secret, {
+                        expiresIn: 604800 // 1 week
+                    });
+
+                    res.json({
+                        success: true,
+                        token: 'Bearer ' + token,
+                        user: {
+                            id: user._id,
+                            name: user.name,
+                            username: user.username,
+                            email: user.email,
+                            phone: user.phone,
+                            role: user.role,
+                            firstLogin: user.firstLogin,
+                            foodTarget: user.foodTarget,
+                            utilitiesTarget: user.utilitiesTarget,
+                            shoppingTarget: user.shoppingTarget,
+                            entertainmentTarget: user.entertainmentTarget
+                        }
+                    });
+                } else {
+                    return res.json({success: false, msg: 'Cannot authenticate. User is suspended.'});
+                }
+            } else {
+                return res.json({success: false, msg: 'Wrong password'});
+            }
+        });
+    });
+});
+
 router.put('/update_user/:id', (req, res, next) => {
     User.findOneAndUpdate({_id: req.params.id}, {name: req.body.name, username: req.body.username, email: req.body.email, phone: req.body.phone}).then((result) => {
         if (result) {
@@ -138,6 +184,12 @@ router.put('/change_targets/:id', (req, res, next) => {
 // Profile
 router.get('/profile', passport.authenticate('jwt', {session: false}), (req, res, next) => {
     res.json({user: req.user});
+});
+
+router.get('/', (req, res, next) => {
+    User.find({}, (rq, rs) => {
+        res.json({users: rs});
+    });
 });
 
 

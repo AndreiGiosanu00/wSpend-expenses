@@ -158,6 +158,18 @@ export class AuthService {
     return  false;
   }
 
+  isStateAdmin() {
+
+    let role = JSON.parse(localStorage.getItem('user')).role;
+
+    if (role == 'admin') {
+      return true;
+    }
+
+    return false;
+
+  }
+
   updateUser(user: any) {
     let headers =  new HttpHeaders();
     this.loadToken();
@@ -210,6 +222,21 @@ export class AuthService {
     headers.append('Content-Type', 'application/json');
 
     return this.http.post('http://localhost:3000/report/problem', body, {headers: headers});
+  }
+
+  loginAdmin(user) {
+    let headers =  new HttpHeaders();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post('http://localhost:3000/users/admin/login', user, {headers: headers});
+  }
+
+  getAllUsers() {
+    let headers =  new HttpHeaders();
+    this.loadToken();
+    headers.append('Authorization', this.authToken);
+    headers.append('Content-Type', 'application/json');
+
+    return this.http.get('http://localhost:3000/users/', {headers: headers});
   }
 
 }
