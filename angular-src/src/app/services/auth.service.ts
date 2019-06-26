@@ -22,6 +22,14 @@ export class AuthService {
 
   }
 
+  addUser(user) {
+
+    let headers =  new HttpHeaders();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post('http://localhost:3000/users/add_user', user, {headers: headers});
+
+  }
+
   sendSMS(user) {
     let headers =  new HttpHeaders();
     headers.append('Content-Type', 'application/json');
@@ -195,15 +203,6 @@ export class AuthService {
     headers.append('Content-Type', 'application/json');
 
     return this.http.put('http://localhost:3000/users/change_targets/' + user._id, user,{headers: headers});
-  }
-
-  changeStatus(user: any) {
-    let headers =  new HttpHeaders();
-    this.loadToken();
-    headers.append('Authorization', this.authToken);
-    headers.append('Content-Type', 'application/json');
-
-    return this.http.put('http://localhost:3000/users/change_status/' + user._id, user,{headers: headers});
   }
 
   deleteUser(userId) {

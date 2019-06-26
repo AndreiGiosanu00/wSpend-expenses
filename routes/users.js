@@ -85,7 +85,7 @@ router.post('/authenticate', (req, res, next) => {
     });
 });
 
-// Autentificarea
+
 router.post('/admin/login', (req, res, next) => {
     const username = req.body.username;
     const password = req.body.password;
@@ -131,6 +131,25 @@ router.post('/admin/login', (req, res, next) => {
     });
 });
 
+router.post('/add_user', (req, res, next) => {
+    let newUser = new User({
+        name: req.body.name,
+        email: req.body.email,
+        username: req.body.username,
+        password: req.body.password,
+        phone: req.body.phone,
+        status: req.body.status,
+        role: req.body.role
+    });
+    User.addUser(newUser, (err, user) => {
+        if (err) {
+            res.json({success: false, msg: 'Failed to register user!'});
+        } else {
+            res.json({success: true, msg: 'User registered!'});
+        }
+    });
+});
+
 router.put('/update_user/:id', (req, res, next) => {
     User.findOneAndUpdate({_id: req.params.id}, {name: req.body.name, username: req.body.username, email: req.body.email, phone: req.body.phone}).then((result) => {
         if (result) {
@@ -152,17 +171,7 @@ router.delete('/delete_user/:id', (req, res, next) => {
 });
 
 router.put('/change_role/:id', (req, res, next) => {
-    User.findOneAndUpdate({_id: req.params.id}, {role: req.body.role}).then((result) => {
-        if (result) {
-            res.json({success: true, msg: 'Entry with id: ' + result._id + ' has been updated.'});
-        } else {
-            res.json({success: false, msg: 'Error when trying to update entry!'})
-        }
-    });
-});
-
-router.put('/change_status/:id', (req, res, next) => {
-    User.findOneAndUpdate({_id: req.params.id}, {status: req.body.status}).then((result) => {
+    User.findOneAndUpdate({_id: req.params.id}, {name: req.body.name, username: req.body.username, status: req.body.status, role: req.body.role}).then((result) => {
         if (result) {
             res.json({success: true, msg: 'Entry with id: ' + result._id + ' has been updated.'});
         } else {
