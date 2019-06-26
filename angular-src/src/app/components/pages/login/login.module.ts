@@ -26,7 +26,7 @@ const routes: Routes = [
         MatToolbarModule,
         FormsModule,
         ReactiveFormsModule,
-        RouterModule.forChild(routes)
+        RouterModule.forChild(routes),
     ],
     declarations: [   
         LoginComponent,

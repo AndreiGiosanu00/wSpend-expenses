@@ -4,6 +4,7 @@ import {Router} from "@angular/router";
 import {DatePipe} from "@angular/common";
 import {ValidateService} from "../../services/validate.service";
 import {RecommendationService} from "../../services/recommendation.service";
+import {AlertsService} from "../../services/alerts.service";
 
 declare let $: any;
 
@@ -37,7 +38,8 @@ export class ExpensesComponent implements OnInit {
               private router: Router,
               private datePipe: DatePipe,
               private validateService: ValidateService,
-              private recommendationService: RecommendationService) {}
+              private recommendationService: RecommendationService,
+              private alertsService: AlertsService) {}
 
   ngOnInit() {
     // Fix the modal backdrop issue.
@@ -118,8 +120,19 @@ export class ExpensesComponent implements OnInit {
       }
 
       if (this.expenseTrigger === 2) {
-        this.authService.addExpense(this.localExpense).subscribe((result) => {
-          // add alerts
+        this.authService.addExpense(this.localExpense).subscribe((result: any) => {
+          if (result.success) {
+            this.alertsService.infoAlert = {
+              active: true,
+              text: 'Expense successfully added.'
+            };
+          } else {
+            this.alertsService.dangerAlert = {
+              active: true,
+              text: 'Error. Failed to add new expense.'
+            };
+          }
+
           this.authService.getAllExpenses().subscribe((result: any) => {
             this.expenses = result.expenses;
           });
@@ -132,10 +145,19 @@ export class ExpensesComponent implements OnInit {
   }
 
   deleteMultiple() {
-    console.log(this.selectedExpenses);
     this.selectedExpenses.forEach((expense) => {
-      this.authService.deleteExpense(expense._id).subscribe((result) => {
-        // afisezi alerta
+      this.authService.deleteExpense(expense._id).subscribe((result: any) => {
+        if (result.success) {
+          this.alertsService.infoAlert = {
+            active: true,
+            text: 'Expenses successfully deleted.'
+          };
+        } else {
+          this.alertsService.dangerAlert = {
+            active: true,
+            text: 'Error. Failed to delete expenses.'
+          };
+        }
         this.authService.getAllExpenses().subscribe((result: any) => {
           this.expenses = result.expenses;
         });
@@ -145,8 +167,18 @@ export class ExpensesComponent implements OnInit {
   }
 
   deleteOne() {
-    this.authService.deleteExpense(this.localExpense._id).subscribe((result) => {
-      // afisezi alerta
+    this.authService.deleteExpense(this.localExpense._id).subscribe((result: any) => {
+      if (result.success) {
+        this.alertsService.infoAlert = {
+          active: true,
+          text: 'Expense successfully deleted.'
+        };
+      } else {
+        this.alertsService.dangerAlert = {
+          active: true,
+          text: 'Error. Failed to delete expense.'
+        };
+      }
       this.authService.getAllExpenses().subscribe((result: any) => {
         this.expenses = result.expenses;
       });
@@ -164,8 +196,18 @@ export class ExpensesComponent implements OnInit {
     this.validators = this.validateService.validateExpense(this.localExpense);
 
     if (!this.validators.name && !this.validators.category && !this.validators.price && !this.validators.date) {
-      this.authService.updateExpense(this.localExpense).subscribe((result) => {
-        // add alerts
+      this.authService.updateExpense(this.localExpense).subscribe((result: any) => {
+        if (result.success) {
+          this.alertsService.infoAlert = {
+            active: true,
+            text: 'Expense ' + this.localExpense.name +' successfully edited.'
+          };
+        } else {
+          this.alertsService.dangerAlert = {
+            active: true,
+            text: 'Error. Failed to edit expense.'
+          };
+        }
         this.authService.getAllExpenses().subscribe((result: any) => {
           this.expenses = result.expenses;
         });

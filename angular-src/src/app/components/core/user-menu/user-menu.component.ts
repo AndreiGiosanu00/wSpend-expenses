@@ -2,6 +2,7 @@ import { Component, OnInit, Input, HostListener, ElementRef } from '@angular/cor
 import {AuthService} from "../../../services/auth.service";
 import {Router} from "@angular/router";
 import {LoadingService} from "../../../services/loading.service";
+import {AlertsService} from "../../../services/alerts.service";
 
 declare let $: any;
 
@@ -34,7 +35,8 @@ export class UserMenuComponent implements OnInit {
   	constructor(private elementRef: ElementRef,
 				private authService: AuthService,
 				private router: Router,
-				private loadingService: LoadingService) { }
+				private loadingService: LoadingService,
+				private alertsService: AlertsService) { }
 
 
   	ngOnInit() {
@@ -53,8 +55,18 @@ export class UserMenuComponent implements OnInit {
 	sendReport() {
   		let content = $('#report').val();
 		this.loadingService.show();
-		this.authService.reportByMail({content: content}).subscribe((result) => {
-			console.log(result);
+		this.authService.reportByMail({content: content}).subscribe((result: any) => {
+			if (result.success) {
+				this.alertsService.infoAlert = {
+					active: true,
+					text: 'You have successfully sent the report via email.'
+				};
+			} else {
+				this.alertsService.dangerAlert = {
+					active: true,
+					text: 'Error. Failed to send report.'
+				};
+			}
 			this.loadingService.hide();
 		});
 	}

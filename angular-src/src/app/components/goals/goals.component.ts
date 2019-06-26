@@ -3,6 +3,7 @@ import {AuthService} from "../../services/auth.service";
 import {ValidateService} from "../../services/validate.service";
 import {DatePipe} from "@angular/common";
 import {LoadingService} from "../../services/loading.service";
+import {AlertsService} from "../../services/alerts.service";
 
 declare let $: any;
 
@@ -38,7 +39,8 @@ export class GoalsComponent implements OnInit {
   constructor(private authService: AuthService,
               private validateService: ValidateService,
               private datePipe: DatePipe,
-              private loadingService: LoadingService) { }
+              private loadingService: LoadingService,
+              private alertsService: AlertsService) { }
 
   ngOnInit() {
     $('#addGoalModal').appendTo('body');
@@ -133,10 +135,19 @@ export class GoalsComponent implements OnInit {
     this.validators = this.validateService.validateGoal(this.localGoal);
 
     if (!this.validators.name && !this.validators.category && !this.validators.price) {
-      console.log('da');
       this.loadingService.show();
-      this.authService.addGoal(this.localGoal).subscribe((result) => {
-        // add alerts
+      this.authService.addGoal(this.localGoal).subscribe((result: any) => {
+        if (result.success) {
+          this.alertsService.infoAlert = {
+            active: true,
+            text: 'Goal successfully added.'
+          };
+        } else {
+          this.alertsService.dangerAlert = {
+            active: true,
+            text: 'Error. Failed to add new goal.'
+          };
+        }
         this.authService.getAllGoals().subscribe((result: any) => {
           this.goals = result.goals;
           this.loadingService.hide();
@@ -149,8 +160,18 @@ export class GoalsComponent implements OnInit {
 
   deleteGoal() {
     this.loadingService.show();
-    this.authService.deleteGoal(this.localGoal._id).subscribe((result) => {
-      // afisezi alerta
+    this.authService.deleteGoal(this.localGoal._id).subscribe((result: any) => {
+      if (result.success) {
+        this.alertsService.infoAlert = {
+          active: true,
+          text: 'Goal successfully deleted.'
+        };
+      } else {
+        this.alertsService.dangerAlert = {
+          active: true,
+          text: 'Error. Failed to delete goal.'
+        };
+      }
       this.authService.getAllGoals().subscribe((result: any) => {
         this.goals = result.goals;
         this.loadingService.hide();
@@ -172,8 +193,18 @@ export class GoalsComponent implements OnInit {
 
     if (!this.validators.name && !this.validators.category && !this.validators.price) {
       this.loadingService.show();
-      this.authService.updateGoal(this.localGoal).subscribe((result) => {
-        // add alerts
+      this.authService.updateGoal(this.localGoal).subscribe((result: any) => {
+        if (result.success) {
+          this.alertsService.infoAlert = {
+            active: true,
+            text: 'Goal ' + this.localGoal.name + ' successfully edited.'
+          };
+        } else {
+          this.alertsService.dangerAlert = {
+            active: true,
+            text: 'Error. Failed to edit goal.'
+          };
+        }
         this.authService.getAllGoals().subscribe((result: any) => {
           this.goals = result.goals;
           this.goals.forEach((goal) => {
@@ -195,8 +226,18 @@ export class GoalsComponent implements OnInit {
       this.localGoal.lastInvestedDate = date.toString();
       this.localGoal.status = 'Active';
       this.loadingService.show();
-      this.authService.updateGoal(this.localGoal).subscribe((result) => {
-        // add alerts
+      this.authService.updateGoal(this.localGoal).subscribe((result: any) => {
+        if (result.success) {
+          this.alertsService.infoAlert = {
+            active: true,
+            text: 'You have invested ' + $('#manageInvest').val() + ' credits in goal ' + this.localGoal.name
+          };
+        } else {
+          this.alertsService.dangerAlert = {
+            active: true,
+            text: 'Error. Failed to invest in goal.'
+          };
+        }
         this.authService.getAllGoals().subscribe((result: any) => {
           this.goals = result.goals;
           this.loadingService.hide();

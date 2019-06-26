@@ -1,4 +1,6 @@
-export const menus = (JSON.parse(localStorage.getItem('user')).role == 'admin') ? [
+let role = (JSON.parse(localStorage.getItem('user'))) ? JSON.parse(localStorage.getItem('user')).role : '';
+
+export const menus = (role == 'admin') ?  [
     {
         'name': 'Admin Dashboard',
         'icon': 'dashboard',

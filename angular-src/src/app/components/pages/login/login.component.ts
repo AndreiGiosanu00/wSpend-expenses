@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import {AuthService} from "../../../services/auth.service";
 import {HttpClient} from "@angular/common/http";
+import {AlertsService} from "../../../services/alerts.service";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -30,7 +31,8 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router,
               private fb: FormBuilder,
               private authService: AuthService,
-              private http: HttpClient) {
+              private http: HttpClient,
+              private alertsService: AlertsService) {
   }
 
   ngOnInit() {
@@ -88,11 +90,19 @@ export class LoginComponent implements OnInit {
         // this.flashMessages.show('You have successfully login!', {cssClass: 'alert-success', timeout: 3000});
         this.router.navigateByUrl('/auth/dashboard');
       } else {
+        this.alertsService.dangerAlert = {
+          active: true,
+          text: response.msg
+        };
         // this.flashMessages.show(response.msg, {cssClass: 'alert-danger', timeout: 5000});
         this.router.navigateByUrl('/login');
       }
     });
 
+  }
+
+  closeDangerAlert() {
+    this.alertsService.dangerAlert.active = false;
   }
 }
 

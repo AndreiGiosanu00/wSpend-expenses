@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from "../../services/auth.service";
+import {AlertsService} from "../../services/alerts.service";
 
 @Component({
     selector: 'app-dashboard-crm',
@@ -23,7 +24,8 @@ export class DashboardCrmComponent implements OnInit {
         price: string
     }[] = [];
 
-    constructor(private authService: AuthService) { }
+    constructor(private authService: AuthService,
+                private alertsService: AlertsService) { }
 
     ngOnInit() {
         this.authService.getAllExpenses().subscribe((result: any) => {
@@ -62,6 +64,13 @@ export class DashboardCrmComponent implements OnInit {
                     }
                }
             });
+
+            if (this.firstFourActiveGoals.length < 4) {
+                this.alertsService.warningAlert = {
+                    text: 'You don\'t have four goals to display the full interface. To add them go to wishlist page and click "Add a new goal".',
+                    active: true,
+                }
+            }
         });
 
     }

@@ -5,14 +5,15 @@ import { Injectable } from '@angular/core';
 })
 export class RecommendationService {
 
-  private targetFood = 1000;
-  private targetEntertaiment = 650;
-  private targetUtilities = 1200;
-  private targetShopping = 800;
+  
 
   constructor() { }
 
   isExpenseUseful(expense, expenses) {
+    let targetFood = JSON.parse(localStorage.getItem('user')).foodTarget;
+    let targetEntertainment = JSON.parse(localStorage.getItem('user')).entertainmentTarget;
+    let targetUtilities = JSON.parse(localStorage.getItem('user')).utilitiesTarget;
+    let targetShopping = JSON.parse(localStorage.getItem('user')).shoppingTarget;
     let expenseCategory = expense.category;
     let total = 0;
 
@@ -23,25 +24,26 @@ export class RecommendationService {
     });
 
     if (expenseCategory === 'Food') {
-      if (total > this.targetFood) {
+      console.log('da', targetFood);
+      if (total > targetFood) {
         return false;
       }
     }
 
     if (expenseCategory === 'Entertainment') {
-      if (total > this.targetEntertaiment) {
+      if (total > targetEntertainment) {
         return false;
       }
     }
 
     if (expenseCategory === 'Utilities') {
-      if (total > this.targetUtilities) {
+      if (total > targetUtilities) {
         return false;
       }
     }
 
     if (expenseCategory === 'Shopping') {
-      if (total > this.targetShopping) {
+      if (total > targetShopping) {
         return false;
       }
     }

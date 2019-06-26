@@ -21,7 +21,7 @@ import {AdminGuard} from "./guards/admin.guard";
         LazyLoadModule,
         CoreModule,
         BrowserAnimationsModule,
-        LoadingModule
+        LoadingModule,
     ],
     providers: [
         AuthService,
