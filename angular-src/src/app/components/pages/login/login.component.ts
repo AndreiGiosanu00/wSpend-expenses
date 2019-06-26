@@ -14,6 +14,7 @@ declare let $: any;
 })
 export class LoginComponent implements OnInit {
 
+  activeStep = 1;
   userForm: FormGroup;
   formErrors = {
     'username': '',
@@ -88,20 +89,48 @@ export class LoginComponent implements OnInit {
       password: this.userForm.value.password
     };
 
-    this.authService.authenticateUser(user).subscribe((response: any) => {
-      if (response.success) {
-        this.authService.storeUserData(response.token, response.user);
-        // this.flashMessages.show('You have successfully login!', {cssClass: 'alert-success', timeout: 3000});
-        this.router.navigateByUrl('/auth/dashboard');
-      } else {
-        this.alertsService.dangerAlert = {
-          active: true,
-          text: response.msg
-        };
-        // this.flashMessages.show(response.msg, {cssClass: 'alert-danger', timeout: 5000});
-        this.router.navigateByUrl('/login');
-      }
-    });
+    if (this.activeStep == 2) {
+      let code = $('#code').val();
+      this.authService.checkSMSCode(code).subscribe((response: any) => {
+        if (response.success) {
+          this.router.navigateByUrl('/auth/dashboard');
+        } else {
+          this.alertsService.dangerAlert = {
+            active: true,
+            text: response.msg
+          };
+          localStorage.clear();
+          this.router.navigateByUrl('/login');
+        }
+      });
+    }
+
+    if (this.activeStep == 1) {
+      this.authService.authenticateUser(user).subscribe((response: any) => {
+        if (response.success) {
+          this.authService.storeUserData(response.token, response.user);
+          user['phone'] = response.user.phone;
+          this.authService.sendSMS(user).subscribe((res: any) => {
+            if (!res.success) {
+              this.alertsService.dangerAlert = {
+                active: true,
+                text: response.msg
+              };
+            }
+          });
+        } else {
+          this.alertsService.dangerAlert = {
+            active: true,
+            text: response.msg
+          };
+          this.router.navigateByUrl('/login');
+          this.activeStep = 1;
+        }
+      });
+      this.activeStep ++;
+    }
+
+
 
   }
 

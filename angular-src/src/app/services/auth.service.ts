@@ -36,6 +36,12 @@ export class AuthService {
     return this.http.post('http://localhost:3000/users/sms', user, {headers: headers});
   }
 
+  checkSMSCode (code) {
+    let headers =  new HttpHeaders();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post('http://localhost:3000/users/code_sms', {code: code}, {headers: headers});
+  }
+
   authenticateUser(user) {
 
     let headers =  new HttpHeaders();

@@ -20,23 +20,26 @@ router.post('/register', (req, res, next) => {
         phone: req.body.phone
     });
 
-    if (smsCode + '' === req.body.code + '') {
-        User.addUser(newUser, (err, user) => {
-            if (err) {
-                res.json({success: false, msg: 'Failed to register user!'});
-            } else {
-                res.json({success: true, msg: 'User registered!'});
-            }
-        });
-    } else {
-        res.json({success: false, msg: 'Invalid code!'});
-    }
-
+    User.addUser(newUser, (err, user) => {
+        if (err) {
+            res.json({success: false, msg: 'Failed to register user!'});
+        } else {
+            res.json({success: true, msg: 'User registered!'});
+        }
+    });
 });
 
 router.post('/sms', (req, res, next) => {
     smsCode  = sms.sendSms(req.body.phone);
     res.json({success: true, msg: 'Code successfully sent'});
+});
+
+router.post('/code_sms', (req, res, next) => {
+    if (smsCode == req.body.code) {
+        res.json({success: true, msg: 'You gave successfully login'});
+    } else {
+        res.json({success: false, msg: 'Invalid code'});
+    }
 });
 
 // Autentificarea

@@ -164,10 +164,7 @@ export class RegisterComponent implements OnInit {
     }
 
     // Register a new user
-    if (this.activeStep == 2) {
-      user['code'] = this.codeForm.value.code;
-
-      this.authService.registerUser(user).subscribe((response: any) => {
+    this.authService.registerUser(user).subscribe((response: any) => {
         if (response.success) {
           // this.flashMessages.show('You have registered successfully and you can login now', {cssClass: 'alert-success', timeout: 3000});
           this.router.navigateByUrl('/login');
@@ -175,13 +172,6 @@ export class RegisterComponent implements OnInit {
           // this.flashMessages.show('Something went wrong. We will investigate ASAP.', {cssClass: 'alert-danger', timeout: 3000});
         }
       });
-    } else {
-      this.authService.sendSMS(user).subscribe();
-    }
-
-    if (this.activeStep == 1) {
-      this.activeStep ++;
-    }
   }
 
 }

@@ -11,7 +11,7 @@ module.exports.sendSms = function (number) {
     const code = Math.floor(Math.random()*90000) + 10000;
     const text = 'Your code for login is ' + code;
 
-    // nexmo.message.sendSms(from, to, text);
+    nexmo.message.sendSms(from, to, text);
 
     return code;
 };
