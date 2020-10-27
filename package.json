@@ -19,7 +19,7 @@
     "passport": "*",
     "passport-jwt": "*",
     "smtp": "^0.1.4",
-    "systeminformation": "^4.9.0",
+    "systeminformation": "^4.27.11",
     "xoauth2": "^1.2.0"
   },
   "author": "Andrei Giosanu",
