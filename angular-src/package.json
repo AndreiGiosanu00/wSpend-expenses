@@ -52,7 +52,7 @@
     "rxjs": "6.0.0",
     "rxjs-compat": "6.0.0",
     "screenfull": "^3.3.2",
-    "systeminformation": "^4.9.0",
+    "systeminformation": "^4.27.11",
     "vued3tree": "^3.5.0",
     "zone.js": "^0.8.26"
   },
